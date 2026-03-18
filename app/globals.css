@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Primary Colors */
+  --cs-void: #0E0E14;
+  --cs-canvas: #F5F2EE;
+  --cs-ember: #FF4C1F;
+
+  /* Accent Colors (Semantic) */
+  --cs-circuit: #4CF0A8;
+  --cs-broadcast: #FFCE3D;
+  --cs-signal: #A78BFF;
+  --cs-blueprint: #1A8CFF;
+
+  /* Neutral Scale */
+  --cs-n-900: #0E0E14;
+  --cs-n-800: #1C1C28;
+  --cs-n-700: #2E2E40;
+  --cs-n-500: #484860;
+  --cs-n-400: #7A7A96;
+  --cs-n-200: #B0B0C4;
+  --cs-n-100: #E0DDD8;
+  --cs-n-50: #F5F2EE;
+
+  /* Typography */
+  --font-syne: 'Syne', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark Mode Default */
+html {
+  background-color: var(--cs-void);
+  color: var(--cs-canvas);
+}
+
+body {
+  background-color: var(--cs-void);
+  color: var(--cs-canvas);
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Light Mode for Blog Pages */
+body[data-theme="light"],
+body.blog-light {
+  background-color: var(--cs-canvas);
+  color: var(--cs-void);
+}
+
+body[data-theme="light"] a,
+body.blog-light a {
+  color: var(--cs-blueprint);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-syne);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--cs-blueprint);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+button,
+.btn {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--cs-ember);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #E63D1A;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--cs-canvas);
+  color: var(--cs-void);
+}
+
+body[data-theme="light"] .btn-secondary,
+body.blog-light .btn-secondary {
+  background-color: var(--cs-void);
+  color: var(--cs-canvas);
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* Cards */
+.card {
+  background-color: var(--cs-n-800);
+  border: 1px solid var(--cs-n-700);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+body[data-theme="light"] .card,
+body.blog-light .card {
+  background-color: #FFFFFF;
+  border-color: var(--cs-n-100);
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.tag-circuit {
+  color: var(--cs-circuit);
+  background-color: var(--cs-n-800);
+  border-color: var(--cs-n-700);
+}
+
+body[data-theme="light"] .tag-circuit,
+body.blog-light .tag-circuit {
+  color: var(--cs-n-700);
+  background-color: #FFFFFF;
+  border-color: var(--cs-n-100);
+}
+
+.tag-broadcast {
+  color: var(--cs-broadcast);
+  background-color: var(--cs-n-800);
+  border-color: var(--cs-n-700);
+}
+
+body[data-theme="light"] .tag-broadcast,
+body.blog-light .tag-broadcast {
+  color: var(--cs-n-700);
+  background-color: #FFFFFF;
+  border-color: var(--cs-n-100);
+}
+
+.tag-signal {
+  color: var(--cs-signal);
+  background-color: var(--cs-n-800);
+  border-color: var(--cs-n-700);
+}
+
+body[data-theme="light"] .tag-signal,
+body.blog-light .tag-signal {
+  color: #FFFFFF;
+  background-color: var(--cs-ember);
+  border-color: var(--cs-ember);
+}
+
+/* Text Colors */
+.text-muted {
+  color: var(--cs-n-500);
+}
+
+body[data-theme="light"] .text-muted,
+body.blog-light .text-muted {
+  color: var(--cs-n-200);
+}
+
+.text-secondary {
+  color: var(--cs-n-400);
+}
+
+/* Dividers & Borders */
+hr {
+  background-color: var(--cs-n-700);
+  border: none;
+  height: 1px;
+  margin: 2rem 0;
+}
+
+body[data-theme="light"] hr,
+body.blog-light hr {
+  background-color: var(--cs-n-100);
+}
+
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Helper Classes */
+.text-ember {
+  color: var(--cs-ember);
+}
+
+.bg-void {
+  background-color: var(--cs-void);
+}
+
+.bg-canvas {
+  background-color: var(--cs-canvas);
+}
+
+.bg-surface {
+  background-color: var(--cs-n-800);
+}
+
+body[data-theme="light"] .bg-surface,
+body.blog-light .bg-surface {
+  background-color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Prose for blog posts */
+.prose {
+  max-width: 65ch;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  background-color: var(--cs-n-800);
+  color: var(--cs-circuit);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+body[data-theme="light"] .prose code,
+body.blog-light .prose code {
+  background-color: #F5F2EE;
+  color: var(--cs-void);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--cs-n-700);
+}
+
+body[data-theme="light"] th,
+body[data-theme="light"] td,
+body.blog-light th,
+body.blog-light td {
+  border-bottom-color: var(--cs-n-100);
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--cs-n-800);
+}
+
+body[data-theme="light"] th,
+body.blog-light th {
+  background-color: #F5F2EE;
+}
