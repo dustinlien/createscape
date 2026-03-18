@@ -1,779 +1,1067 @@
 'use client'
 
+import { useEffect } from 'react'
+
 export default function Home() {
+  useEffect(() => {
+    const words = document.querySelectorAll('.cycle-word')
+    let current = 0
+    const interval = setInterval(() => {
+      words[current].classList.remove('active')
+      words[current].classList.add('exit')
+      const prev = current
+      current = (current + 1) % words.length
+      words[current].classList.add('active')
+      setTimeout(() => words[prev].classList.remove('exit'), 400)
+    }, 2200)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <>
+      <style>{`
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+          --void:       #0E0E14;
+          --canvas:     #F5F2EE;
+          --ember:      #FF4C1F;
+          --circuit:    #4CF0A8;
+          --broadcast:  #FFCE3D;
+          --signal:     #A78BFF;
+          --blueprint:  #1A8CFF;
+          --n-800: #1C1C28;
+          --n-700: #2E2E40;
+          --n-500: #484860;
+          --n-400: #7A7A96;
+          --n-200: #B0B0C4;
+          --n-100: #E0DDD8;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+          background: var(--void);
+          color: var(--canvas);
+          font-family: 'DM Sans', sans-serif;
+          font-size: 16px;
+          line-height: 1.6;
+          -webkit-font-smoothing: antialiased;
+          overflow-x: hidden;
+        }
+
+        /* ─── NAV ─────────────────────────────────────── */
+        nav {
+          position: fixed;
+          top: 0; left: 0; right: 0;
+          z-index: 100;
+          padding: 0 40px;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: rgba(14,14,20,0.85);
+          backdrop-filter: blur(12px);
+          border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav-logo {
+          font-family: 'Syne', sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          color: var(--canvas);
+          text-decoration: none;
+        }
+
+        .nav-logo span { color: var(--ember); }
+
+        .nav-links {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          list-style: none;
+        }
+
+        .nav-links a {
+          font-size: 13px;
+          font-weight: 400;
+          color: var(--n-400);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--canvas); }
+
+        .nav-cta {
+          background: var(--ember);
+          color: #fff !important;
+          padding: 10px 18px;
+          border-radius: 6px;
+          font-weight: 500 !important;
+          font-size: 13px !important;
+          transition: opacity 0.2s !important;
+          min-height: 44px;
+          display: inline-flex !important;
+          align-items: center;
+        }
+
+        .nav-cta:hover { opacity: 0.88; }
+
+        /* ─── HERO ─────────────────────────────────────── */
+        .hero {
+          min-height: 100vh;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          padding-top: 64px;
+        }
+
+        .hero-bg {
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+        }
+
+        .hero-bg img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          display: block;
+        }
+
+        .hero-bg-overlay {
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(ellipse 80% 70% at 50% 50%, rgba(14,14,20,0.35) 0%, rgba(14,14,20,0.88) 100%),
+            linear-gradient(180deg, rgba(14,14,20,0.6) 0%, transparent 25%, transparent 65%, rgba(14,14,20,0.75) 100%);
+        }
+
+        .hero-left {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 80px 40px;
+          position: relative;
+          z-index: 2;
+          max-width: 860px;
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .hero-content-inner {
+          background: rgba(14,14,20,0.55);
+          backdrop-filter: blur(2px);
+          -webkit-backdrop-filter: blur(2px);
+          border: 1px solid rgba(255,255,255,0.06);
+          border-radius: 20px;
+          padding: 56px 64px;
+          width: 100%;
+        }
+
+        .hero-eyebrow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 24px;
+          animation: fadeUp 0.6s ease forwards;
+          animation-delay: 0.1s;
+          opacity: 0;
+        }
+
+        .hero-eyebrow-line {
+          width: 24px;
+          height: 2px;
+          background: var(--ember);
+          flex-shrink: 0;
+        }
+
+        .hero-eyebrow-text {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--ember);
+          text-shadow: 0 1px 8px rgba(14,14,20,0.9);
+        }
+
+        .hero-headline {
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(36px, 4.2vw, 58px);
+          font-weight: 800;
+          line-height: 1.05;
+          letter-spacing: -0.03em;
+          margin-bottom: 22px;
+          color: var(--canvas);
+          text-shadow: 0 2px 24px rgba(14,14,20,0.9), 0 1px 4px rgba(14,14,20,0.8);
+          animation: fadeUp 0.6s ease forwards;
+          animation-delay: 0.2s;
+          opacity: 0;
+        }
+
+        .hero-headline em {
+          font-style: normal;
+          color: var(--ember);
+        }
+
+        .hero-sub {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.65;
+          color: #e8e5e1;
+          max-width: 560px;
+          margin: 0 auto 36px;
+          text-align: center;
+          text-shadow: 0 1px 12px rgba(14,14,20,0.95), 0 1px 3px rgba(14,14,20,0.9);
+          animation: fadeUp 0.6s ease forwards;
+          animation-delay: 0.35s;
+          opacity: 0;
+        }
+
+        .hero-sub strong {
+          color: var(--canvas);
+          font-weight: 500;
+        }
+
+        .hero-actions {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          animation: fadeUp 0.6s ease forwards;
+          animation-delay: 0.5s;
+          opacity: 0;
+        }
+
+        .btn-primary {
+          background: var(--ember);
+          color: #fff;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 14px 28px;
+          border-radius: 7px;
+          text-decoration: none;
+          transition: opacity 0.2s, transform 0.2s;
+          display: inline-block;
+          border: none;
+          cursor: pointer;
+        }
+
+        .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+        .btn-ghost {
+          color: var(--n-400);
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          transition: color 0.2s;
+        }
+
+        .btn-ghost:hover { color: var(--canvas); }
+
+        .btn-ghost::after { content: '→'; }
+
+        /* ─── SECTION COMMONS ──────────────────────────── */
+        section { position: relative; }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 60px;
+        }
+
+        .section-label {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--n-500);
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+
+        .section-label::before {
+          content: '';
+          width: 20px;
+          height: 1px;
+          background: var(--n-500);
+          flex-shrink: 0;
+        }
+
+        .section-title {
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(32px, 3.5vw, 48px);
+          font-weight: 700;
+          line-height: 1.1;
+          letter-spacing: -0.025em;
+          color: var(--canvas);
+        }
+
+        .section-title em {
+          font-style: normal;
+          color: var(--ember);
+        }
+
+        /* ─── ABOUT / POSITIONING ──────────────────────── */
+        .about {
+          padding: 120px 0;
+          background: var(--void);
+        }
+
+        .about-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: center;
+        }
+
+        .about-copy {
+          font-size: 16px;
+          line-height: 1.75;
+          color: var(--n-400);
+          margin-top: 28px;
+        }
+
+        .about-copy p + p { margin-top: 20px; }
+
+        .about-copy strong {
+          color: var(--canvas);
+          font-weight: 500;
+        }
+
+        .about-right {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .about-card {
+          background: var(--n-800);
+          border: 1px solid var(--n-700);
+          border-radius: 12px;
+          padding: 24px 28px;
+          display: flex;
+          gap: 20px;
+          align-items: flex-start;
+          transition: border-color 0.2s;
+        }
+
+        .about-card:hover { border-color: var(--n-500); }
+
+        .about-card-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          flex-shrink: 0;
+          background: rgba(255,76,31,0.15);
+        }
+
+        .about-card-title {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--canvas);
+          margin-bottom: 4px;
+        }
+
+        .about-card-text {
+          font-size: 13px;
+          color: var(--n-400);
+          line-height: 1.55;
+        }
+
+        /* ─── GUIDES GRID ─────────────────────────────── */
+        .guides {
+          padding: 120px 0;
+          background: var(--n-800);
+        }
+
+        .guides-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 56px;
+        }
+
+        .view-all {
+          font-size: 13px;
+          color: var(--ember);
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-weight: 500;
+          transition: gap 0.2s;
+          cursor: pointer;
+        }
+
+        .view-all:hover { gap: 10px; }
+
+        .guides-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+
+        .guide-card {
+          background: var(--void);
+          border: 1px solid var(--n-700);
+          border-radius: 12px;
+          overflow: hidden;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          transition: border-color 0.2s, transform 0.2s;
+          position: relative;
+          color: inherit;
+          cursor: pointer;
+        }
+
+        .guide-card:hover {
+          border-color: rgba(255,76,31,0.4);
+          transform: translateY(-3px);
+        }
+
+        .guide-card-top {
+          height: 200px;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: flex-end;
+          padding: 16px;
+        }
+
+        .guide-bg-1 { background: linear-gradient(160deg, #1a1230 0%, #0E0E14 100%); }
+        .guide-bg-2 { background: linear-gradient(160deg, #121e2a 0%, #0E0E14 100%); }
+        .guide-bg-3 { background: linear-gradient(160deg, #1e1520 0%, #0E0E14 100%); }
+        .guide-bg-4 { background: linear-gradient(160deg, #1a1e14 0%, #0E0E14 100%); }
+        .guide-bg-5 { background: linear-gradient(160deg, #201a10 0%, #0E0E14 100%); }
+
+        .guide-card-top::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image:
+            linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+          background-size: 28px 28px;
+        }
+
+        .guide-card-icon-large {
+          font-size: 48px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -60%);
+          opacity: 0.2;
+        }
+
+        .guide-card-body {
+          padding: 20px 22px 24px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .guide-tag {
+          display: inline-block;
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          padding: 3px 9px;
+          border-radius: 20px;
+          margin-bottom: 12px;
+          width: fit-content;
+        }
+
+        .tag-gear { background: rgba(76,240,168,0.1); color: var(--circuit); }
+        .tag-setup { background: rgba(167,139,255,0.1); color: var(--signal); }
+        .tag-audio { background: rgba(255,206,61,0.1); color: var(--broadcast); }
+        .tag-guide { background: rgba(255,76,31,0.1); color: var(--ember); }
+
+        .guide-card-title {
+          font-family: 'Syne', sans-serif;
+          font-size: 17px;
+          font-weight: 600;
+          line-height: 1.25;
+          letter-spacing: -0.01em;
+          color: var(--canvas);
+          margin-bottom: 10px;
+          flex: 1;
+        }
+
+        .guide-card-desc {
+          font-size: 13px;
+          color: var(--n-400);
+          line-height: 1.55;
+          margin-bottom: 16px;
+        }
+
+        .guide-card-meta {
+          font-size: 11px;
+          color: var(--n-500);
+          font-family: 'JetBrains Mono', monospace;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .guide-card.featured {
+          grid-column: span 2;
+          flex-direction: row;
+        }
+
+        .guide-card.featured .guide-card-top {
+          width: 340px;
+          min-width: 340px;
+          height: auto;
+          border-radius: 0;
+        }
+
+        .guide-card.featured .guide-card-body {
+          padding: 32px 32px;
+        }
+
+        .guide-card.featured .guide-card-title {
+          font-size: 22px;
+        }
+
+        /* ─── CATEGORIES ─────────────────────────────── */
+        .categories {
+          padding: 120px 0;
+          background: var(--void);
+        }
+
+        .cat-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+
+        .cat-card {
+          border: 1px solid var(--n-700);
+          border-radius: 12px;
+          padding: 28px 24px;
+          text-decoration: none;
+          background: var(--n-800);
+          transition: border-color 0.2s, transform 0.2s, background 0.2s;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          cursor: pointer;
+          color: inherit;
+        }
+
+        .cat-card:hover {
+          border-color: var(--n-500);
+          transform: translateY(-2px);
+          background: var(--n-700);
+        }
+
+        .cat-icon {
+          width: 44px;
+          height: 44px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+        }
+
+        .cat-name {
+          font-family: 'Syne', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--canvas);
+          letter-spacing: -0.01em;
+        }
+
+        .cat-count {
+          font-size: 12px;
+          color: var(--n-400);
+          margin-top: -6px;
+        }
+
+        .cat-arrow {
+          font-size: 16px;
+          color: var(--n-500);
+          margin-top: auto;
+          transition: color 0.2s, transform 0.2s;
+        }
+
+        .cat-card:hover .cat-arrow {
+          color: var(--ember);
+          transform: translateX(4px);
+        }
+
+        /* ─── NEWSLETTER ──────────────────────────────── */
+        .newsletter {
+          padding: 100px 0;
+          background: var(--n-800);
+          border-top: 1px solid var(--n-700);
+          border-bottom: 1px solid var(--n-700);
+        }
+
+        .newsletter-inner {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: center;
+        }
+
+        .newsletter-title {
+          font-family: 'Syne', sans-serif;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
+          color: var(--canvas);
+          margin-bottom: 16px;
+        }
+
+        .newsletter-title em {
+          font-style: normal;
+          color: var(--ember);
+        }
+
+        .newsletter-sub {
+          font-size: 15px;
+          color: var(--n-400);
+          line-height: 1.6;
+        }
+
+        .newsletter-form {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .newsletter-row {
+          display: flex;
+          gap: 10px;
+        }
+
+        .newsletter-input {
+          flex: 1;
+          background: var(--void);
+          border: 1px solid var(--n-700);
+          border-radius: 7px;
+          padding: 13px 18px;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 14px;
+          color: var(--canvas);
+          outline: none;
+          transition: border-color 0.2s;
+        }
+
+        .newsletter-input::placeholder { color: var(--n-500); }
+        .newsletter-input:focus { border-color: var(--n-500); }
+
+        .newsletter-submit {
+          background: var(--ember);
+          color: #fff;
+          border: none;
+          border-radius: 7px;
+          padding: 13px 24px;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: opacity 0.2s;
+          white-space: nowrap;
+        }
+
+        .newsletter-submit:hover { opacity: 0.88; }
+
+        .newsletter-promise {
+          font-size: 11px;
+          color: var(--n-500);
+        }
+
+        /* ─── FOOTER ────────────────────────────────── */
+        footer {
+          background: var(--void);
+          padding: 60px 0 40px;
+          border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .footer-inner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 40px;
+          border-bottom: 1px solid rgba(255,255,255,0.04);
+          margin-bottom: 28px;
+        }
+
+        .footer-logo {
+          font-family: 'Syne', sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          color: var(--canvas);
+          text-decoration: none;
+        }
+
+        .footer-logo span { color: var(--ember); }
+
+        .footer-links {
+          display: flex;
+          gap: 28px;
+          list-style: none;
+        }
+
+        .footer-links a {
+          font-size: 13px;
+          color: var(--n-400);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--canvas); }
+
+        .footer-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .footer-copy {
+          font-size: 12px;
+          color: var(--n-500);
+        }
+
+        .footer-accent {
+          display: flex;
+          gap: 6px;
+        }
+
+        .footer-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+        }
+
+        /* ─── ANIMATIONS ─────────────────────────────── */
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(24px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── WORD CYCLE ─────────────────────────────── */
+        .hero-word-cycle {
+          position: relative;
+          display: inline-block;
+          color: var(--ember);
+        }
+
+        .cycle-word {
+          display: inline-block;
+          opacity: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translateY(16px);
+          transition: opacity 0.4s ease, transform 0.4s ease;
+          white-space: nowrap;
+          pointer-events: none;
+        }
+
+        .cycle-word.active {
+          opacity: 1;
+          position: relative;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+
+        .cycle-word.exit {
+          opacity: 0;
+          position: absolute;
+          transform: translateY(-16px);
+        }
+      `}</style>
+
       {/* NAV */}
-      <nav style={{
-        position: 'fixed',
-        top: 0, left: 0, right: 0,
-        zIndex: 100,
-        padding: '0 40px',
-        height: '64px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        background: 'rgba(14,14,20,0.85)',
-        backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(255,255,255,0.05)'
-      }}>
-        <a href="/" style={{
-          fontFamily: "'Syne', sans-serif",
-          fontSize: '18px',
-          fontWeight: '700',
-          letterSpacing: '-0.02em',
-          color: 'var(--canvas)',
-          textDecoration: 'none'
-        }}>
-          Create<span style={{ color: 'var(--ember)' }}>scape</span>
-        </a>
-        <ul style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '32px',
-          listStyle: 'none'
-        }}>
-          <li><a href="/posts" style={{ fontSize: '13px', fontWeight: 400, color: 'var(--n-400)', textDecoration: 'none' }}>Guides</a></li>
-          <li><a href="/categories" style={{ fontSize: '13px', fontWeight: 400, color: 'var(--n-400)', textDecoration: 'none' }}>Categories</a></li>
-          <li><a href="/about" style={{ fontSize: '13px', fontWeight: 400, color: 'var(--n-400)', textDecoration: 'none' }}>About</a></li>
-          <li><a href="/newsletter" style={{
-            background: 'var(--ember)',
-            color: '#fff',
-            padding: '10px 18px',
-            borderRadius: '6px',
-            fontWeight: '500',
-            fontSize: '13px',
-            textDecoration: 'none',
-            display: 'inline-flex',
-            alignItems: 'center',
-            height: '44px'
-          }}>Get the newsletter</a></li>
+      <nav>
+        <a href="/" className="nav-logo">Create<span>scape</span></a>
+        <ul className="nav-links">
+          <li><a href="/posts">Guides</a></li>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/newsletter" className="nav-cta">Get the newsletter</a></li>
         </ul>
       </nav>
 
       {/* HERO */}
-      <section style={{
-        minHeight: '100vh',
-        position: 'relative',
-        overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
-        paddingTop: '64px',
-        background: 'url(/hero-creator.jpg) center/cover'
-      }}>
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: `
-            radial-gradient(ellipse 80% 70% at 50% 50%, rgba(14,14,20,0.35) 0%, rgba(14,14,20,0.88) 100%),
-            linear-gradient(180deg, rgba(14,14,20,0.6) 0%, transparent 25%, transparent 65%, rgba(14,14,20,0.75) 100%)
-          `,
-          zIndex: 1
-        }} />
+      <section className="hero">
+        <div className="hero-bg">
+          <img src="/hero-creator.jpg" alt="Creator at their workspace" />
+          <div className="hero-bg-overlay"></div>
+        </div>
 
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          padding: '80px 40px',
-          position: 'relative',
-          zIndex: 2,
-          maxWidth: '860px',
-          margin: '0 auto',
-          width: '100%'
-        }}>
-          <div style={{
-            background: 'rgba(14,14,20,0.55)',
-            backdropFilter: 'blur(2px)',
-            WebkitBackdropFilter: 'blur(2px)',
-            border: '1px solid rgba(255,255,255,0.06)',
-            borderRadius: '20px',
-            padding: '56px 64px',
-            width: '100%'
-          }}>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '10px',
-              marginBottom: '24px'
-            }}>
-              <div style={{ width: '24px', height: '2px', background: 'var(--ember)' }} />
-              <span style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: '11px',
-                fontWeight: '500',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                color: 'var(--ember)',
-                textShadow: '0 1px 8px rgba(14,14,20,0.9)'
-              }}>Workspace gear & inspiration for creators</span>
-              <div style={{ width: '24px', height: '2px', background: 'var(--ember)' }} />
+        <div className="hero-left">
+          <div className="hero-content-inner">
+            <div className="hero-eyebrow">
+              <div className="hero-eyebrow-line"></div>
+              <span className="hero-eyebrow-text">Workspace gear & inspiration for creators</span>
+              <div className="hero-eyebrow-line"></div>
             </div>
 
-            <h1 style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(36px, 4.2vw, 58px)',
-              fontWeight: '800',
-              lineHeight: '1.05',
-              letterSpacing: '-0.03em',
-              marginBottom: '22px',
-              color: 'var(--canvas)',
-              textShadow: '0 2px 24px rgba(14,14,20,0.9), 0 1px 4px rgba(14,14,20,0.8)'
-            }}>
-              Everything you need<br />to create your<br />best <span style={{ color: 'var(--ember)' }}>videos.</span>
+            <h1 className="hero-headline">
+              Everything you need<br />to create your<br />best <span className="hero-word-cycle"><span className="cycle-word active">videos.</span><span className="cycle-word">podcast.</span><span className="cycle-word">app.</span><span className="cycle-word">business.</span></span>
             </h1>
 
-            <p style={{
-              fontSize: '16px',
-              fontWeight: 400,
-              lineHeight: '1.65',
-              color: '#e8e5e1',
-              maxWidth: '560px',
-              margin: '0 auto 36px',
-              textAlign: 'center',
-              textShadow: '0 1px 12px rgba(14,14,20,0.95), 0 1px 3px rgba(14,14,20,0.9)'
-            }}>
+            <p className="hero-sub">
               Top creators build environments that make their best work feel effortless. Createscape makes it easy to <strong>discover the best gear, tools, and setups</strong> to build a workspace that feels like home — and get inspired along the way.
             </p>
 
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '20px',
-              flexWrap: 'wrap'
-            }}>
-              <a href="/posts" style={{
-                background: 'var(--ember)',
-                color: '#fff',
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '14px',
-                fontWeight: '500',
-                padding: '14px 28px',
-                borderRadius: '7px',
-                textDecoration: 'none',
-                display: 'inline-block',
-                transition: 'opacity 0.2s, transform 0.2s',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.opacity = '0.88';
-                el.style.transform = 'translateY(-1px)';
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-              }}>
-                Browse all guides
-              </a>
+            <div className="hero-actions">
+              <a href="/posts" className="btn-primary">Browse all guides</a>
             </div>
           </div>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section style={{
-        padding: '120px 0',
-        background: 'var(--void)'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '0 60px',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '80px',
-          alignItems: 'center'
-        }}>
-          <div>
-            <div style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: '10px',
-              fontWeight: '500',
-              letterSpacing: '0.14em',
-              textTransform: 'uppercase',
-              color: 'var(--n-500)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              marginBottom: '20px'
-            }}>
-              <span style={{ width: '20px', height: '1px', background: 'var(--n-500)' }} />
-              What we're building
+      <section className="about">
+        <div className="container">
+          <div className="about-grid">
+            <div>
+              <div className="section-label">What we're building</div>
+              <h2 className="section-title">Gear intel for people<br />who <em>actually ship.</em></h2>
+              <div className="about-copy">
+                <p>Most workspace content is either generic roundups or spec-sheet noise. We're building something different: <strong>honest, in-depth guides</strong> built around how creators actually work — from the developer with three monitors and a mechanical keyboard habit, to the podcaster who turned a closet into a proper studio.</p>
+                <p>Whether you're setting up your first proper home office or rebuilding from scratch, Createscape covers the decisions that matter: what to buy, what to skip, and what's actually worth the money.</p>
+                <p>And soon — <strong>real creator workspace features</strong>. Real people, real gear, real spaces you can actually get inspired by.</p>
+              </div>
             </div>
-            <h2 style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(32px, 3.5vw, 48px)',
-              fontWeight: '700',
-              lineHeight: '1.1',
-              letterSpacing: '-0.025em',
-              color: 'var(--canvas)',
-              marginBottom: '28px'
-            }}>
-              Gear intel for people<br />who <em style={{ fontStyle: 'normal', color: 'var(--ember)' }}>actually ship.</em>
-            </h2>
-            <div style={{
-              fontSize: '16px',
-              lineHeight: '1.75',
-              color: 'var(--n-400)'
-            }}>
-              <p style={{ marginBottom: '20px' }}>Most workspace content is either generic roundups or spec-sheet noise. We're building something different: <strong style={{ color: 'var(--canvas)', fontWeight: '500' }}>honest, in-depth guides</strong> built around how creators actually work — from the developer with three monitors and a mechanical keyboard habit, to the podcaster who turned a closet into a proper studio.</p>
-              <p style={{ marginBottom: '20px' }}>Whether you're setting up your first proper home office or rebuilding from scratch, Createscape covers the decisions that matter: what to buy, what to skip, and what's actually worth the money.</p>
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {[
-              { icon: '🎯', title: 'Built for all creator types', text: 'Developers, video creators, podcasters, streamers, writers — if you work from a desk, we\'ve got you covered.' },
-              { icon: '🔧', title: 'Practical, not aspirational', text: 'We cover real budget ranges, real tradeoffs, and real setups — not just what looks good in a photoshoot.' },
-              { icon: '📸', title: 'Real creator workspaces, coming soon', text: 'We\'re building a directory of featured creator spaces — real people, real gear lists, real costs. No stock photos.' },
-              { icon: '✍️', title: 'Gear that actually ships', text: 'Every product we recommend is available to buy today. No vaporware, no out-of-stock dead ends.' }
-            ].map((card, idx) => (
-              <div key={idx} style={{
-                background: 'var(--n-800)',
-                border: '1px solid var(--n-700)',
-                borderRadius: '12px',
-                padding: '24px 28px',
-                display: 'flex',
-                gap: '20px',
-                alignItems: 'flex-start',
-                transition: 'border-color 0.2s'
-              }}>
-                <div style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '16px',
-                  flexShrink: 0,
-                  background: 'rgba(255,76,31,0.15)'
-                }}>
-                  {card.icon}
-                </div>
+            <div className="about-right">
+              <div className="about-card">
+                <div className="about-card-icon">🎯</div>
                 <div>
-                  <div style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '14px',
-                    fontWeight: '500',
-                    color: 'var(--canvas)',
-                    marginBottom: '4px'
-                  }}>
-                    {card.title}
-                  </div>
-                  <div style={{
-                    fontSize: '13px',
-                    color: 'var(--n-400)',
-                    lineHeight: '1.55'
-                  }}>
-                    {card.text}
-                  </div>
+                  <div className="about-card-title">Built for all creator types</div>
+                  <div className="about-card-text">Developers, video creators, podcasters, streamers, writers — if you work from a desk, we've got you covered.</div>
                 </div>
               </div>
-            ))}
+              <div className="about-card">
+                <div className="about-card-icon">🔧</div>
+                <div>
+                  <div className="about-card-title">Practical, not aspirational</div>
+                  <div className="about-card-text">We cover real budget ranges, real tradeoffs, and real setups — not just what looks good in a photoshoot.</div>
+                </div>
+              </div>
+              <div className="about-card">
+                <div className="about-card-icon">📸</div>
+                <div>
+                  <div className="about-card-title">Real creator workspaces, coming soon</div>
+                  <div className="about-card-text">We're building a directory of featured creator spaces — real people, real gear lists, real costs. No stock photos.</div>
+                </div>
+              </div>
+              <div className="about-card">
+                <div className="about-card-icon">✍️</div>
+                <div>
+                  <div className="about-card-title">Gear that actually ships</div>
+                  <div className="about-card-text">Every product we recommend is available to buy today. No vaporware, no out-of-stock dead ends.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* GUIDES */}
-      <section style={{
-        padding: '120px 0',
-        background: 'var(--n-800)'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 60px' }}>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            marginBottom: '56px'
-          }}>
+      <section className="guides">
+        <div className="container">
+          <div className="guides-header">
             <div>
-              <div style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: '10px',
-                fontWeight: '500',
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'var(--n-500)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                marginBottom: '20px'
-              }}>
-                <span style={{ width: '20px', height: '1px', background: 'var(--n-500)' }} />
-                Latest guides
-              </div>
-              <h2 style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: 'clamp(32px, 3.5vw, 48px)',
-                fontWeight: '700',
-                lineHeight: '1.1',
-                letterSpacing: '-0.025em',
-                color: 'var(--canvas)'
-              }}>
-                Start building<br />your setup.
-              </h2>
+              <div className="section-label">Latest guides</div>
+              <h2 className="section-title">Start building<br />your setup.</h2>
             </div>
-            <a href="/posts" style={{
-              fontSize: '13px',
-              color: 'var(--ember)',
-              textDecoration: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              fontWeight: '500',
-              cursor: 'pointer'
-            }}>
-              View all guides →
-            </a>
+            <a href="/posts" className="view-all">View all guides</a>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '20px'
-          }}>
+          <div className="guides-grid">
             {/* Featured card */}
-            <a href="/posts/standing-desk" style={{
-              gridColumn: 'span 2',
-              background: 'var(--void)',
-              border: '1px solid var(--n-700)',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              textDecoration: 'none',
-              display: 'flex',
-              flexDirection: 'row',
-              transition: 'border-color 0.2s, transform 0.2s',
-              color: 'inherit',
-              cursor: 'pointer'
-            }}>
-              <div style={{
-                width: '340px',
-                minWidth: '340px',
-                height: 'auto',
-                position: 'relative',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'flex-end',
-                padding: '16px',
-                background: 'linear-gradient(160deg, #1a1230 0%, #0E0E14 100%)'
-              }} />
-              <div style={{
-                padding: '32px 32px',
-                flex: 1,
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <span style={{
-                  display: 'inline-block',
-                  fontSize: '10px',
-                  fontWeight: '500',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  padding: '3px 9px',
-                  borderRadius: '20px',
-                  marginBottom: '12px',
-                  width: 'fit-content',
-                  background: 'rgba(76,240,168,0.1)',
-                  color: 'var(--circuit)'
-                }}>Buyer's Guide</span>
-                <div style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: '22px',
-                  fontWeight: '600',
-                  lineHeight: '1.25',
-                  letterSpacing: '-0.01em',
-                  color: 'var(--canvas)',
-                  marginBottom: '10px',
-                  flex: 1
-                }}>
-                  The Standing Desk Buyer's Guide
-                </div>
-                <div style={{
-                  fontSize: '13px',
-                  color: 'var(--n-400)',
-                  lineHeight: '1.55',
-                  marginBottom: '16px'
-                }}>
-                  The marketing all looks the same. The real differences are in the motors, warranties, and what happens when something breaks two years in.
-                </div>
-                <div style={{
-                  fontSize: '11px',
-                  color: 'var(--n-500)',
-                  fontFamily: "'JetBrains Mono', monospace",
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px'
-                }}>
+            <a href="/posts/standing-desk" className="guide-card featured">
+              <div className="guide-card-top guide-bg-1"></div>
+              <div className="guide-card-body">
+                <span className="guide-tag tag-gear">Buyer's Guide</span>
+                <div className="guide-card-title">The Standing Desk Buyer's Guide: Uplift vs FlexiSpot vs Autonomous (and who each is actually for)</div>
+                <div className="guide-card-desc">The marketing all looks the same. The real differences are in the motors, warranties, and what happens when something breaks two years in. We break it down.</div>
+                <div className="guide-card-meta">
                   <span>12 min read</span>
                   <span>Updated March 2026</span>
                 </div>
               </div>
             </a>
 
-            {/* Regular cards */}
-            {[
-              { href: '/posts/ergonomic-chairs', emoji: '🪑', tag: 'Ergonomics', title: 'Best Ergonomic Chairs for Long Work Sessions', desc: 'From $200 budget picks to the Herman Miller Aeron — what\'s actually worth it.', time: '9 min read', bg: 'linear-gradient(160deg, #121e2a 0%, #0E0E14 100%)' },
-              { href: '/posts/lighting-biophilic', emoji: '💡', tag: 'Lighting & Aesthetic', title: 'Lighting Your Workspace: Bias Lights, Ring Lights & Biophilic Design', desc: 'Good lighting isn\'t just for video. It changes how your space feels.', time: '7 min read', bg: 'linear-gradient(160deg, #1e1520 0%, #0E0E14 100%)' },
-              { href: '/posts/setup-tours', emoji: '📸', tag: 'Creator Setups', title: '10 Real Creator Setups — What They Actually Spent', desc: 'No aesthetic staging. Real desks, real gear, real price tags.', time: '15 min read', bg: 'linear-gradient(160deg, #1a1e14 0%, #0E0E14 100%)' },
-            ].map((guide, idx) => (
-              <a key={idx} href={guide.href} style={{
-                background: 'var(--void)',
-                border: '1px solid var(--n-700)',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                textDecoration: 'none',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'border-color 0.2s, transform 0.2s',
-                color: 'inherit',
-                cursor: 'pointer'
-              }}>
-                <div style={{
-                  height: '200px',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  alignItems: 'flex-end',
-                  padding: '16px',
-                  background: guide.bg,
-                  fontSize: '48px',
-                  opacity: 0.2
-                }}>
-                  {guide.emoji}
+            {/* Other cards */}
+            <a href="/posts/ergonomic-chairs" className="guide-card">
+              <div className="guide-card-top guide-bg-2">
+                <div className="guide-card-icon-large">🪑</div>
+              </div>
+              <div className="guide-card-body">
+                <span className="guide-tag tag-setup">Ergonomics</span>
+                <div className="guide-card-title">Best Ergonomic Chairs for Long Work Sessions</div>
+                <div className="guide-card-desc">From $200 budget picks to the Herman Miller Aeron — what's actually worth it and what you're just paying for the logo.</div>
+                <div className="guide-card-meta">
+                  <span>9 min read</span>
                 </div>
-                <div style={{
-                  padding: '20px 22px 24px',
-                  flex: 1,
-                  display: 'flex',
-                  flexDirection: 'column'
-                }}>
-                  <span style={{
-                    display: 'inline-block',
-                    fontSize: '10px',
-                    fontWeight: '500',
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase',
-                    padding: '3px 9px',
-                    borderRadius: '20px',
-                    marginBottom: '12px',
-                    width: 'fit-content',
-                    background: 'rgba(167,139,255,0.1)',
-                    color: 'var(--signal)'
-                  }}>{guide.tag}</span>
-                  <div style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: '17px',
-                    fontWeight: '600',
-                    lineHeight: '1.25',
-                    letterSpacing: '-0.01em',
-                    color: 'var(--canvas)',
-                    marginBottom: '10px',
-                    flex: 1
-                  }}>
-                    {guide.title}
-                  </div>
-                  <div style={{
-                    fontSize: '13px',
-                    color: 'var(--n-400)',
-                    lineHeight: '1.55',
-                    marginBottom: '16px'
-                  }}>
-                    {guide.desc}
-                  </div>
-                  <div style={{
-                    fontSize: '11px',
-                    color: 'var(--n-500)',
-                    fontFamily: "'JetBrains Mono', monospace"
-                  }}>
-                    {guide.time}
-                  </div>
+              </div>
+            </a>
+
+            <a href="/posts/lighting-biophilic" className="guide-card">
+              <div className="guide-card-top guide-bg-3">
+                <div className="guide-card-icon-large">💡</div>
+              </div>
+              <div className="guide-card-body">
+                <span className="guide-tag tag-audio">Lighting & Aesthetic</span>
+                <div className="guide-card-title">Lighting Your Workspace: Bias Lights, Ring Lights & Biophilic Design</div>
+                <div className="guide-card-desc">Good lighting isn't just for video. It changes how your space feels, how long you can focus, and yes — how your webcam looks on calls.</div>
+                <div className="guide-card-meta">
+                  <span>7 min read</span>
                 </div>
-              </a>
-            ))}
+              </div>
+            </a>
+
+            <a href="/posts/setup-tours" className="guide-card">
+              <div className="guide-card-top guide-bg-4">
+                <div className="guide-card-icon-large">📸</div>
+              </div>
+              <div className="guide-card-body">
+                <span className="guide-tag tag-guide">Creator Setups</span>
+                <div className="guide-card-title">10 Real Creator Setups — What They Actually Spent</div>
+                <div className="guide-card-desc">No aesthetic staging. Real desks, real gear, real price tags. From the $800 starter build to the full production studio.</div>
+                <div className="guide-card-meta">
+                  <span>15 min read</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="/posts/podcast-gear" className="guide-card">
+              <div className="guide-card-top guide-bg-5">
+                <div className="guide-card-icon-large">🎙️</div>
+              </div>
+              <div className="guide-card-body">
+                <span className="guide-tag tag-audio">Audio & Podcast</span>
+                <div className="guide-card-title">Podcast Gear for Every Budget: Under $200, $500, $1k+</div>
+                <div className="guide-card-desc">The USB mic vs XLR debate, interface options, and how to treat a room without gutting your walls. Everything you need, nothing you don't.</div>
+                <div className="guide-card-meta">
+                  <span>10 min read</span>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
       {/* CATEGORIES */}
-      <section style={{
-        padding: '120px 0',
-        background: 'var(--void)'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 60px' }}>
-          <div style={{ marginBottom: '56px' }}>
-            <div style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: '10px',
-              fontWeight: '500',
-              letterSpacing: '0.14em',
-              textTransform: 'uppercase',
-              color: 'var(--n-500)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              marginBottom: '20px'
-            }}>
-              <span style={{ width: '20px', height: '1px', background: 'var(--n-500)' }} />
-              Browse by category
-            </div>
-            <h2 style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: 'clamp(32px, 3.5vw, 48px)',
-              fontWeight: '700',
-              lineHeight: '1.1',
-              letterSpacing: '-0.025em',
-              color: 'var(--canvas)'
-            }}>
-              Find what your<br />setup is missing.
-            </h2>
+      <section className="categories">
+        <div className="container">
+          <div>
+            <div className="section-label">Browse by category</div>
+            <h2 className="section-title">Find what your<br />setup is missing.</h2>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '16px'
-          }}>
-            {[
-              { icon: '🖥️', name: 'Desks & Surfaces', count: 'Standing desks, desk mats, cable trays' },
-              { icon: '🪑', name: 'Seating & Ergonomics', count: 'Chairs, footrests, monitor arms' },
-              { icon: '🎙️', name: 'Audio & Video', count: 'Mics, cameras, lights, interfaces' },
-              { icon: '⌨️', name: 'Keyboards & Peripherals', count: 'Mechanical keyboards, mice, pads' },
-            ].map((cat, idx) => (
-              <a key={idx} href={`/categories/${cat.name.toLowerCase().replace(/\s/g, '-')}`} style={{
-                border: '1px solid var(--n-700)',
-                borderRadius: '12px',
-                padding: '28px 24px',
-                textDecoration: 'none',
-                background: 'var(--n-800)',
-                transition: 'border-color 0.2s, transform 0.2s, background 0.2s',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '14px',
-                cursor: 'pointer',
-                color: 'inherit'
-              }}>
-                <div style={{
-                  width: '44px',
-                  height: '44px',
-                  borderRadius: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '20px',
-                  background: 'rgba(76,240,168,0.1)'
-                }}>
-                  {cat.icon}
-                </div>
-                <div style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: '16px',
-                  fontWeight: '600',
-                  color: 'var(--canvas)',
-                  letterSpacing: '-0.01em'
-                }}>
-                  {cat.name}
-                </div>
-                <div style={{
-                  fontSize: '12px',
-                  color: 'var(--n-400)',
-                  marginTop: '-6px'
-                }}>
-                  {cat.count}
-                </div>
-                <div style={{
-                  fontSize: '16px',
-                  color: 'var(--n-500)',
-                  marginTop: 'auto',
-                  transition: 'color 0.2s, transform 0.2s'
-                }}>
-                  →
-                </div>
-              </a>
-            ))}
+          <div className="cat-grid">
+            <a href="/categories/desks" className="cat-card">
+              <div className="cat-icon" style={{ background: 'rgba(76,240,168,0.1)' }}>🖥️</div>
+              <div>
+                <div className="cat-name">Desks & Surfaces</div>
+                <div className="cat-count">Standing desks, desk mats, cable trays</div>
+              </div>
+              <div className="cat-arrow">→</div>
+            </a>
+            <a href="/categories/seating" className="cat-card">
+              <div className="cat-icon" style={{ background: 'rgba(167,139,255,0.1)' }}>🪑</div>
+              <div>
+                <div className="cat-name">Seating & Ergonomics</div>
+                <div className="cat-count">Chairs, footrests, monitor arms</div>
+              </div>
+              <div className="cat-arrow">→</div>
+            </a>
+            <a href="/categories/audio-video" className="cat-card">
+              <div className="cat-icon" style={{ background: 'rgba(255,206,61,0.1)' }}>🎙️</div>
+              <div>
+                <div className="cat-name">Audio & Video</div>
+                <div className="cat-count">Mics, cameras, lights, interfaces</div>
+              </div>
+              <div className="cat-arrow">→</div>
+            </a>
+            <a href="/categories/peripherals" className="cat-card">
+              <div className="cat-icon" style={{ background: 'rgba(255,76,31,0.1)' }}>⌨️</div>
+              <div>
+                <div className="cat-name">Keyboards & Peripherals</div>
+                <div className="cat-count">Mechanical keyboards, mice, pads</div>
+              </div>
+              <div className="cat-arrow">→</div>
+            </a>
           </div>
         </div>
       </section>
 
       {/* NEWSLETTER */}
-      <section style={{
-        padding: '100px 0',
-        background: 'var(--n-800)',
-        borderTop: '1px solid var(--n-700)',
-        borderBottom: '1px solid var(--n-700)'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '0 60px',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '80px',
-          alignItems: 'center'
-        }}>
-          <div>
-            <h2 style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: '36px',
-              fontWeight: '700',
-              lineHeight: '1.1',
-              letterSpacing: '-0.02em',
-              color: 'var(--canvas)',
-              marginBottom: '16px'
-            }}>
-              New guides, every<br /><em style={{ fontStyle: 'normal', color: 'var(--ember)' }}>single week.</em>
-            </h2>
-            <p style={{
-              fontSize: '15px',
-              color: 'var(--n-400)',
-              lineHeight: '1.6'
-            }}>
-              We cover one piece of the setup puzzle each week — honest reviews, real comparisons, and the occasional "we bought this so you don't have to."
-            </p>
-          </div>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '12px'
-          }}>
-            <div style={{
-              display: 'flex',
-              gap: '10px'
-            }}>
-              <input
-                type="email"
-                placeholder="your@email.com"
-                style={{
-                  flex: 1,
-                  background: 'var(--void)',
-                  border: '1px solid var(--n-700)',
-                  borderRadius: '7px',
-                  padding: '13px 18px',
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '14px',
-                  color: 'var(--canvas)',
-                  outline: 'none'
-                }}
-              />
-              <button style={{
-                background: 'var(--ember)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '7px',
-                padding: '13px 24px',
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '14px',
-                fontWeight: '500',
-                cursor: 'pointer',
-                transition: 'opacity 0.2s',
-                whiteSpace: 'nowrap'
-              }}>
-                Subscribe free
-              </button>
+      <section className="newsletter">
+        <div className="container">
+          <div className="newsletter-inner">
+            <div>
+              <h2 className="newsletter-title">New guides, every<br /><em>single week.</em></h2>
+              <p className="newsletter-sub">We cover one piece of the setup puzzle each week — honest reviews, real comparisons, and the occasional "we bought this so you don't have to."</p>
             </div>
-            <p style={{
-              fontSize: '11px',
-              color: 'var(--n-500)'
-            }}>
-              No spam. One email per week. Unsubscribe any time.
-            </p>
+            <div className="newsletter-form">
+              <div className="newsletter-row">
+                <input type="email" className="newsletter-input" placeholder="your@email.com" />
+                <button className="newsletter-submit">Subscribe free</button>
+              </div>
+              <div className="newsletter-promise">No spam. One email per week. Unsubscribe any time.</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer style={{
-        background: 'var(--void)',
-        padding: '60px 0 40px',
-        borderTop: '1px solid rgba(255,255,255,0.04)'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '0 60px'
-        }}>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingBottom: '40px',
-            borderBottom: '1px solid rgba(255,255,255,0.04)',
-            marginBottom: '28px'
-          }}>
-            <a href="/" style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: '16px',
-              fontWeight: '700',
-              letterSpacing: '-0.02em',
-              color: 'var(--canvas)',
-              textDecoration: 'none'
-            }}>
-              Create<span style={{ color: 'var(--ember)' }}>scape</span>
-            </a>
-            <ul style={{
-              display: 'flex',
-              gap: '28px',
-              listStyle: 'none'
-            }}>
-              <li><a href="/posts" style={{ fontSize: '13px', color: 'var(--n-400)', textDecoration: 'none' }}>Guides</a></li>
-              <li><a href="/categories" style={{ fontSize: '13px', color: 'var(--n-400)', textDecoration: 'none' }}>Categories</a></li>
-              <li><a href="/about" style={{ fontSize: '13px', color: 'var(--n-400)', textDecoration: 'none' }}>About</a></li>
-              <li><a href="/newsletter" style={{ fontSize: '13px', color: 'var(--n-400)', textDecoration: 'none' }}>Newsletter</a></li>
+      <footer>
+        <div className="container">
+          <div className="footer-inner">
+            <a href="/" className="footer-logo">Create<span>scape</span></a>
+            <ul className="footer-links">
+              <li><a href="/posts">Guides</a></li>
+              <li><a href="/categories">Categories</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/newsletter">Newsletter</a></li>
             </ul>
           </div>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center'
-          }}>
-            <span style={{
-              fontSize: '12px',
-              color: 'var(--n-500)'
-            }}>
-              © 2026 Createscape. All rights reserved.
-            </span>
-            <div style={{
-              display: 'flex',
-              gap: '6px'
-            }}>
-              {['var(--ember)', 'var(--circuit)', 'var(--broadcast)', 'var(--signal)'].map((color, idx) => (
-                <div
-                  key={idx}
-                  style={{
-                    width: '8px',
-                    height: '8px',
-                    borderRadius: '50%',
-                    background: color
-                  }}
-                />
-              ))}
+          <div className="footer-bottom">
+            <span className="footer-copy">© 2026 Createscape. All rights reserved.</span>
+            <div className="footer-accent">
+              <div className="footer-dot" style={{ background: 'var(--ember)' }}></div>
+              <div className="footer-dot" style={{ background: 'var(--circuit)' }}></div>
+              <div className="footer-dot" style={{ background: 'var(--broadcast)' }}></div>
+              <div className="footer-dot" style={{ background: 'var(--signal)' }}></div>
             </div>
           </div>
         </div>
       </footer>
-
-      <script>{`
-        const words = document.querySelectorAll('.cycle-word');
-        let current = 0;
-        setInterval(() => {
-          if (words[current]) {
-            words[current].classList.remove('active');
-            words[current].classList.add('exit');
-            const prev = current;
-            current = (current + 1) % words.length;
-            if (words[current]) {
-              words[current].classList.add('active');
-              setTimeout(() => words[prev].classList.remove('exit'), 400);
-            }
-          }
-        }, 2200);
-      `}</script>
     </>
   )
 }
