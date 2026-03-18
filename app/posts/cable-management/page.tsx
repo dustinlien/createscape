@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Cable Management Hacks: Organize Your Desk Setup | Createscape",
+  description: "Cable organization guide for clean, professional creator workspaces.",
+  openGraph: {
+    title: "Cable Management Hacks: Organize Your Desk Setup",
+    description: "Cable organization guide for clean, professional creator workspaces.",
+    url: "https://www.createscape.co/posts/cable-management",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-cable-management.png",
+      width: 1200,
+      height: 630,
+      alt: "Cable Management Hacks: Organize Your Desk Setup"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cable Management Hacks: Organize Your Desk Setup",
+    description: "Cable organization guide for clean, professional creator workspaces."
+  }
+}
 
 export default function CableManagementPost() {
   return (

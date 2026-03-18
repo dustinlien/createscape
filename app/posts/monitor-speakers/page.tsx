@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Monitor Speakers for Creators | Createscape",
+  description: "Studio monitor speaker buying guide for podcast and video production.",
+  openGraph: {
+    title: "Monitor Speakers for Creators",
+    description: "Studio monitor speaker buying guide for podcast and video production.",
+    url: "https://www.createscape.co/posts/monitor-speakers",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-monitor-speakers.png",
+      width: 1200,
+      height: 630,
+      alt: "Monitor Speakers for Creators"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Monitor Speakers for Creators",
+    description: "Studio monitor speaker buying guide for podcast and video production."
+  }
+}
 
 export default function MonitorSpeakersPost() {
   return (

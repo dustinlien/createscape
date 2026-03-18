@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Microphone Placement Guide | Createscape",
+  description: "Microphone placement techniques for professional podcast and video audio quality.",
+  openGraph: {
+    title: "Microphone Placement Guide",
+    description: "Microphone placement techniques for professional podcast and video audio quality.",
+    url: "https://www.createscape.co/posts/microphone-placement",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-microphone-placement.png",
+      width: 1200,
+      height: 630,
+      alt: "Microphone Placement Guide"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Microphone Placement Guide",
+    description: "Microphone placement techniques for professional podcast and video audio quality."
+  }
+}
 
 export default function MicrophonePlacementPost() {
   return (

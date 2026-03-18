@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Studio Lighting for Content Creators 2026 | Createscape",
+  description: "Studio lighting guide. Ring lights, key lights, 3-light setups for YouTube and streaming.",
+  openGraph: {
+    title: "Studio Lighting for Content Creators 2026",
+    description: "Studio lighting guide. Ring lights, key lights, 3-light setups for YouTube and streaming.",
+    url: "https://www.createscape.co/posts/studio-lighting",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-studio-lighting.png",
+      width: 1200,
+      height: 630,
+      alt: "Studio Lighting for Content Creators 2026"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Studio Lighting for Content Creators 2026",
+    description: "Studio lighting guide. Ring lights, key lights, 3-light setups for YouTube and streaming."
+  }
+}
 
 export default function StudioLightingPost() {
   return (
@@ -11,6 +31,9 @@ export default function StudioLightingPost() {
           "datePublished": "2026-03-18",
           "author": { "@type": "Organization", "name": "Createscape" }
         })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify("{\"@context\":\"schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Do I need expensive studio lights?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. A $50 ring light works great for starting.\"}}]}")}
       </script>
 
       <article style={{ maxWidth: '850px', margin: '0 auto', padding: '60px 40px' }}>

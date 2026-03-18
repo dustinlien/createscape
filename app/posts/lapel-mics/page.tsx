@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Wireless Lapel Microphones Guide | Createscape",
+  description: "Lapel microphone buying guide. Rode Wireless GO II, hands-free audio for video.",
+  openGraph: {
+    title: "Wireless Lapel Microphones Guide",
+    description: "Lapel microphone buying guide. Rode Wireless GO II, hands-free audio for video.",
+    url: "https://www.createscape.co/posts/lapel-mics",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-lapel-mics.png",
+      width: 1200,
+      height: 630,
+      alt: "Wireless Lapel Microphones Guide"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wireless Lapel Microphones Guide",
+    description: "Lapel microphone buying guide. Rode Wireless GO II, hands-free audio for video."
+  }
+}
 
 export default function LapelMicsPost() {
   return (

@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Video Editing Software 2026 | Createscape",
+  description: "Video editing software guide. Premiere Pro, DaVinci Resolve, CapCut comparison.",
+  openGraph: {
+    title: "Video Editing Software 2026",
+    description: "Video editing software guide. Premiere Pro, DaVinci Resolve, CapCut comparison.",
+    url: "https://www.createscape.co/posts/video-editing",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-video-editing.png",
+      width: 1200,
+      height: 630,
+      alt: "Video Editing Software 2026"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Video Editing Software 2026",
+    description: "Video editing software guide. Premiere Pro, DaVinci Resolve, CapCut comparison."
+  }
+}
 
 export default function VideoEditingPost() {
   return (

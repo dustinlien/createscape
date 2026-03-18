@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Best Ergonomic Chairs for Long Work Sessions 2026 | Createscape",
+  description: "Ergonomic chair buying guide for creators. Herman Miller, Steelcase, budget options for 8+ hour comfort.",
+  openGraph: {
+    title: "Best Ergonomic Chairs for Long Work Sessions 2026",
+    description: "Ergonomic chair buying guide for creators. Herman Miller, Steelcase, budget options for 8+ hour comfort.",
+    url: "https://www.createscape.co/posts/ergonomic-chairs",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-ergonomic-chairs.png",
+      width: 1200,
+      height: 630,
+      alt: "Best Ergonomic Chairs for Long Work Sessions 2026"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Ergonomic Chairs for Long Work Sessions 2026",
+    description: "Ergonomic chair buying guide for creators. Herman Miller, Steelcase, budget options for 8+ hour comfort."
+  }
+}
 
 export default function ErgonomicChairsPost() {
   return (
@@ -11,6 +31,9 @@ export default function ErgonomicChairsPost() {
           "datePublished": "2026-03-18",
           "author": { "@type": "Organization", "name": "Createscape" }
         })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify("{\"@context\":\"schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is lumbar support?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Lumbar support is cushioning that supports your lower back curve.\"}}]}")}
       </script>
 
       <article style={{ maxWidth: '850px', margin: '0 auto', padding: '60px 40px' }}>

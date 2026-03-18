@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Streaming Capture Cards 2026 | Createscape",
+  description: "Capture card buying guide for console gaming streaming.",
+  openGraph: {
+    title: "Streaming Capture Cards 2026",
+    description: "Capture card buying guide for console gaming streaming.",
+    url: "https://www.createscape.co/posts/capture-cards",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-capture-cards.png",
+      width: 1200,
+      height: 630,
+      alt: "Streaming Capture Cards 2026"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Streaming Capture Cards 2026",
+    description: "Capture card buying guide for console gaming streaming."
+  }
+}
 
 export default function CaptureCardsPost() {
   return (

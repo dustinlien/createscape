@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Podcast Equipment Guide 2026 | Createscape",
+  description: "Podcast equipment guide. USB mics, XLR interfaces, complete setups for all budgets.",
+  openGraph: {
+    title: "Podcast Equipment Guide 2026",
+    description: "Podcast equipment guide. USB mics, XLR interfaces, complete setups for all budgets.",
+    url: "https://www.createscape.co/posts/podcast-equipment",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-podcast-equipment.png",
+      width: 1200,
+      height: 630,
+      alt: "Podcast Equipment Guide 2026"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Podcast Equipment Guide 2026",
+    description: "Podcast equipment guide. USB mics, XLR interfaces, complete setups for all budgets."
+  }
+}
 
 export default function PodcastEquipmentPost() {
   return (
@@ -11,6 +31,9 @@ export default function PodcastEquipmentPost() {
           "datePublished": "2026-03-18",
           "author": { "@type": "Organization", "name": "Createscape" }
         })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify("{\"@context\":\"schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"USB or XLR microphone?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"USB for simplicity starting out. XLR for flexibility and quality if serious.\"}}]}")}
       </script>
 
       <article style={{ maxWidth: '850px', margin: '0 auto', padding: '60px 40px' }}>

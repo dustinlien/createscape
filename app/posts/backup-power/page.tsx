@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Backup Power for Creator Studios | Createscape",
+  description: "Backup power (UPS) buying guide for protecting creator equipment.",
+  openGraph: {
+    title: "Backup Power for Creator Studios",
+    description: "Backup power (UPS) buying guide for protecting creator equipment.",
+    url: "https://www.createscape.co/posts/backup-power",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-backup-power.png",
+      width: 1200,
+      height: 630,
+      alt: "Backup Power for Creator Studios"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Backup Power for Creator Studios",
+    description: "Backup power (UPS) buying guide for protecting creator equipment."
+  }
+}
 
 export default function BackupPowerPost() {
   return (

@@ -1,6 +1,28 @@
-'use client'
-
 import Image from 'next/image'
+
+
+
+export const metadata = {
+  title: "Standing Desk Buying Guide 2026: Uplift vs FlexiSpot vs Autonomous | Createscape",
+  description: "Complete standing desk buying guide with comparison of motors, stability, warranty, and creator reviews.",
+  openGraph: {
+    title: "Standing Desk Buying Guide 2026: Uplift vs FlexiSpot vs Autonomous",
+    description: "Complete standing desk buying guide with comparison of motors, stability, warranty, and creator reviews.",
+    url: "https://www.createscape.co/posts/standing-desk",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-standing-desk.png",
+      width: 1200,
+      height: 630,
+      alt: "Standing Desk Buying Guide 2026: Uplift vs FlexiSpot vs Autonomous"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Standing Desk Buying Guide 2026: Uplift vs FlexiSpot vs Autonomous",
+    description: "Complete standing desk buying guide with comparison of motors, stability, warranty, and creator reviews."
+  }
+}
 
 export default function StandingDeskPost() {
   return (
@@ -16,6 +38,9 @@ export default function StandingDeskPost() {
           "author": { "@type": "Organization", "name": "Createscape" },
           "keywords": "standing desk, buying guide, Uplift, FlexiSpot, Autonomous"
         })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify("{\"@context\":\"schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How high should my desk be when standing?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"When standing comfortably, elbows should be at roughly 90 degrees. That's usually 38–48 inches from floor to desktop.\"}},{\"@type\":\"Question\",\"name\":\"Should I start with standing or sitting?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Start with sitting. The benefit is switching — 20–30 min sitting, then 20–30 min standing.\"}},{\"@type\":\"Question\",\"name\":\"Electric or manual standing desk?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Electric is worth the extra $100–$200. You'll actually use it if it's effortless.\"}}]}")}
       </script>
 
       <article style={{ maxWidth: '850px', margin: '0 auto', padding: '60px 40px' }}>

@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Lighting & Biophilic Design for Creator Workspaces | Createscape",
+  description: "Workspace lighting guide. Ring lights, key lights, biophilic design for mood and productivity.",
+  openGraph: {
+    title: "Lighting & Biophilic Design for Creator Workspaces",
+    description: "Workspace lighting guide. Ring lights, key lights, biophilic design for mood and productivity.",
+    url: "https://www.createscape.co/posts/lighting-biophilic",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-lighting-biophilic.png",
+      width: 1200,
+      height: 630,
+      alt: "Lighting & Biophilic Design for Creator Workspaces"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lighting & Biophilic Design for Creator Workspaces",
+    description: "Workspace lighting guide. Ring lights, key lights, biophilic design for mood and productivity."
+  }
+}
 
 export default function LightingBiophilicPost() {
   return (

@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "10 Real Creator Workspace Setup Tours | Budget to Premium | Createscape",
+  description: "Real creator setups with exact products and budgets from $800 to $5,000+ studios.",
+  openGraph: {
+    title: "10 Real Creator Workspace Setup Tours | Budget to Premium",
+    description: "Real creator setups with exact products and budgets from $800 to $5,000+ studios.",
+    url: "https://www.createscape.co/posts/setup-tours",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-setup-tours.png",
+      width: 1200,
+      height: 630,
+      alt: "10 Real Creator Workspace Setup Tours | Budget to Premium"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "10 Real Creator Workspace Setup Tours | Budget to Premium",
+    description: "Real creator setups with exact products and budgets from $800 to $5,000+ studios."
+  }
+}
 
 export default function SetupToursPost() {
   return (

@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Best Monitors for Creators | Ultrawide, 4K, Color-Accurate | Createscape",
+  description: "Monitor buying guide for video editors and streamers. Ultrawide, 4K, color-accurate displays.",
+  openGraph: {
+    title: "Best Monitors for Creators | Ultrawide, 4K, Color-Accurate",
+    description: "Monitor buying guide for video editors and streamers. Ultrawide, 4K, color-accurate displays.",
+    url: "https://www.createscape.co/posts/monitors-streamers",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-monitors-streamers.png",
+      width: 1200,
+      height: 630,
+      alt: "Best Monitors for Creators | Ultrawide, 4K, Color-Accurate"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Monitors for Creators | Ultrawide, 4K, Color-Accurate",
+    description: "Monitor buying guide for video editors and streamers. Ultrawide, 4K, color-accurate displays."
+  }
+}
 
 export default function MonitorsStreamersPost() {
   return (

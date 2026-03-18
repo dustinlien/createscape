@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Best Cameras for Content Creators 2026 | Createscape",
+  description: "Camera buying guide for YouTube creators. Sony, Canon, DJI comparison for all budgets.",
+  openGraph: {
+    title: "Best Cameras for Content Creators 2026",
+    description: "Camera buying guide for YouTube creators. Sony, Canon, DJI comparison for all budgets.",
+    url: "https://www.createscape.co/posts/best-cameras",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-best-cameras.png",
+      width: 1200,
+      height: 630,
+      alt: "Best Cameras for Content Creators 2026"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Cameras for Content Creators 2026",
+    description: "Camera buying guide for YouTube creators. Sony, Canon, DJI comparison for all budgets."
+  }
+}
 
 export default function BestCamerasPost() {
   return (
@@ -11,6 +31,9 @@ export default function BestCamerasPost() {
           "datePublished": "2026-03-18",
           "author": { "@type": "Organization", "name": "Createscape" }
         })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify("{\"@context\":\"schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What's the best camera for YouTube?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Sony A6700 or Canon R50 offer best autofocus and 4K quality.\"}}]}")}
       </script>
 
       <article style={{ maxWidth: '850px', margin: '0 auto', padding: '60px 40px' }}>

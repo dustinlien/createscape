@@ -1,4 +1,24 @@
-'use client'
+export const metadata = {
+  title: "Budget Creator Setup Under $1k | Complete Build Breakdown | Createscape",
+  description: "Build a professional creator workspace for under $1,000. Complete product list with prices.",
+  openGraph: {
+    title: "Budget Creator Setup Under $1k | Complete Build Breakdown",
+    description: "Build a professional creator workspace for under $1,000. Complete product list with prices.",
+    url: "https://www.createscape.co/posts/budget-setup",
+    type: "article",
+    images: [{
+      url: "https://www.createscape.co/og-image-budget-setup.png",
+      width: 1200,
+      height: 630,
+      alt: "Budget Creator Setup Under $1k | Complete Build Breakdown"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Budget Creator Setup Under $1k | Complete Build Breakdown",
+    description: "Build a professional creator workspace for under $1,000. Complete product list with prices."
+  }
+}
 
 export default function BudgetSetupPost() {
   return (
