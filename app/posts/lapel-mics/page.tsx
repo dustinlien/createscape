@@ -154,7 +154,7 @@ export default function LapelMicsPost() {
             <p style={{ color: 'var(--n-600)', marginBottom: '12px' }}>
               As an Amazon Associate, Createscape earns from qualifying purchases.
             </p>
-            <a href="https://amazon.com/s?k=creator+workspace+setup&tag=createscape-20&tag=createscape-20" style={{ display: 'inline-block', background: 'var(--ember)', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', fontSize: '14px' }}>
+            <a href="https://amazon.com/dp/B00AQBEFTA?tag=createscape-20&tag=createscape-20&tag=createscape-20" style={{ display: 'inline-block', background: 'var(--ember)', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', fontSize: '14px' }}>
               View on Amazon →
             </a>
           </div>
