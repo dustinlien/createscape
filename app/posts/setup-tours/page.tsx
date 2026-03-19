@@ -33,30 +33,25 @@ export default function Post() {
             Real Creator Workspace Tours
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
-            <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
+            By Eli Black · 
             10 min read · 
             Updated: 2026-03-19
           </div>
         </header>
 
         <section style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--void)' }}>
-          
-    <p style={{ marginBottom: '20px' }}>
-      This comprehensive guide covers everything you need to know about this topic.
-    </p>
-    <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '28px', fontWeight: '600', marginTop: '40px', marginBottom: '20px' }}>
-      Top Recommendations
-    </h2>
-    <p style={{ marginBottom: '20px' }}>
-      Here are the best options to consider for your setup.
-    </p>
-    <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '28px', fontWeight: '600', marginTop: '40px', marginBottom: '20px' }}>
-      How to Choose
-    </h2>
-    <p style={{ marginBottom: '20px' }}>
-      Look for quality, reliability, and value that fits your workflow.
-    </p>
-  
+          <h1 style={{ fontFamily: "Syne, sans-serif", fontSize: "36px", fontWeight: "700", marginTop: "50px", marginBottom: "24px" }}>Real Creator Workspace Tours</h1>
+  <p style={{ marginBottom: "20px" }}>See how top creators set up their spaces. Real gear, real budgets, real workflows.</p>
+  <h2 style={{ fontFamily: "Syne, sans-serif", fontSize: "28px", fontWeight: "600", marginTop: "40px", marginBottom: "20px" }}>Why This Matters</h2>
+  <p style={{ marginBottom: "20px" }}>If you&#39;re creating content, setup tours can make a real difference.</p>
+  <h2 style={{ fontFamily: "Syne, sans-serif", fontSize: "28px", fontWeight: "600", marginTop: "40px", marginBottom: "20px" }}>Getting Started</h2>
+  <p style={{ marginBottom: "20px" }}>Here&#39;s what to know before you buy.</p>
+  <h2 style={{ fontFamily: "Syne, sans-serif", fontSize: "28px", fontWeight: "600", marginTop: "40px", marginBottom: "20px" }}>Key Considerations</h2>
+  <li style={{ marginLeft: "20px", marginBottom: "8px" }}>Quality matters</li>
+  <li style={{ marginLeft: "20px", marginBottom: "8px" }}>Budget-friendly options exist</li>
+  <li style={{ marginLeft: "20px", marginBottom: "8px" }}>Reliability is key</li>
+  <h2 style={{ fontFamily: "Syne, sans-serif", fontSize: "28px", fontWeight: "600", marginTop: "40px", marginBottom: "20px" }}>Recommendation</h2>
+  <p style={{ marginBottom: "20px" }}>Don&#39;t overthink it. Pick something that works for your workflow and ship your content.</p>
         </section>
 
         {/* Related Products */}

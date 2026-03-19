@@ -40,11 +40,70 @@ files.forEach(file => {
 
 console.log('\n✅ All posts generated from markdown\n');
 
+// Convert markdown to JSX - properly parse and render content
+function convertMarkdownToJSX(md) {
+  if (!md) return '<p>No content</p>';
+  
+  // Escape special characters for JSX
+  let lines = md.split('\n');
+  let result = [];
+  
+  function escapeJSX(text) {
+    return text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+      .replace(/"/g, '&quot;')  // smart quotes
+      .replace(/"/g, '&quot;');  // smart quotes
+  }
+  
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i].trim();
+    if (!line) continue;
+    
+    // Headings
+    if (line.startsWith('### ')) {
+      let content = escapeJSX(line.substring(4));
+      result.push('<h3 style={{ fontFamily: "Syne, sans-serif", fontSize: "20px", fontWeight: "600", marginTop: "30px", marginBottom: "16px" }}>' + content + '</h3>');
+    } else if (line.startsWith('## ')) {
+      let content = escapeJSX(line.substring(3));
+      result.push('<h2 style={{ fontFamily: "Syne, sans-serif", fontSize: "28px", fontWeight: "600", marginTop: "40px", marginBottom: "20px" }}>' + content + '</h2>');
+    } else if (line.startsWith('# ')) {
+      let content = escapeJSX(line.substring(2));
+      result.push('<h1 style={{ fontFamily: "Syne, sans-serif", fontSize: "36px", fontWeight: "700", marginTop: "50px", marginBottom: "24px" }}>' + content + '</h1>');
+    }
+    // Bullet points
+    else if (line.startsWith('- ')) {
+      let content = escapeJSX(line.substring(2));
+      result.push('<li style={{ marginLeft: "20px", marginBottom: "8px" }}>' + content + '</li>');
+    }
+    // Regular paragraph
+    else if (line.length > 0) {
+      // Process inline formatting
+      let processed = escapeJSX(line)
+        .replace(/&lt;strong&gt;([^<]+)&lt;\/strong&gt;/g, '<strong>$1</strong>')
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style={{ color: "var(--signal)", textDecoration: "underline" }}>$1</a>')
+        .replace(/\`([^\`]+)\`/g, '<code style={{ background: "var(--n-100)", padding: "2px 6px", borderRadius: "3px", fontFamily: "monospace" }}>$1</code>');
+      
+      result.push('<p style={{ marginBottom: "20px" }}>' + processed + '</p>');
+    }
+  }
+  
+  return result.join('\n  ');
+}
+
 // Generate post component template
 function generatePostTSX(slug, frontmatter, mdContent, allProducts) {
   const relatedProducts = frontmatter.products
     .map(id => allProducts.find(p => p.id === id))
     .filter(Boolean);
+
+  const bodyContent = convertMarkdownToJSX(mdContent);
+  const productsJSON = JSON.stringify(relatedProducts, null, 2);
 
   return `import { Metadata } from 'next'
 
@@ -57,16 +116,12 @@ export const metadata: Metadata = {
     description: "${frontmatter.description.replace(/"/g, '\\"')}",
     url: "https://www.createscape.co/posts/${slug}",
     type: "article",
-    images: [${frontmatter.featuredImage ? `{
-      url: "${frontmatter.featuredImage}",
-      width: 1200,
-      height: 630,
-    }` : ''}]
+    images: []
   }
 }
 
 export default function Post() {
-  const relatedProducts = ${JSON.stringify(relatedProducts, null, 2)} as any;
+  const relatedProducts = ${productsJSON} as any;
 
   return (
     <main style={{
@@ -85,14 +140,14 @@ export default function Post() {
             ${frontmatter.title}
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
-            ${frontmatter.author ? `<strong style={{ color: 'var(--void)' }}>By ${frontmatter.author}</strong> · ` : ''}
-            ${frontmatter.readTime ? `${frontmatter.readTime} min read · ` : ''}
-            ${frontmatter.updatedDate ? `Updated: ${frontmatter.updatedDate}` : 'March 2026'}
+            ${frontmatter.author ? 'By ' + frontmatter.author + ' · ' : ''}
+            ${frontmatter.readTime ? frontmatter.readTime + ' min read · ' : ''}
+            Updated: ${frontmatter.updatedDate || 'March 2026'}
           </div>
         </header>
 
         <section style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--void)' }}>
-          ${convertMarkdownToJSX(mdContent, allProducts, frontmatter.products)}
+          ${bodyContent}
         </section>
 
         {/* Related Products */}
@@ -116,7 +171,7 @@ export default function Post() {
                 display: 'block'
               }}
             >
-              ${product.image ? `<img src="${product.image}" alt="${product.name}" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />` : ''}
+              <img src="${product.image}" alt="${product.name}" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
               <div style={{ fontWeight: '600', marginBottom: '4px' }}>${product.name}</div>
               <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>${product.price}</div>
               <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
@@ -144,25 +199,4 @@ export default function Post() {
   );
 }
 `;
-}
-
-// Convert markdown to JSX snippets (simplified to avoid escaping)
-function convertMarkdownToJSX(md, allProducts, productIds) {
-  return `
-    <p style={{ marginBottom: '20px' }}>
-      This comprehensive guide covers everything you need to know about this topic.
-    </p>
-    <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '28px', fontWeight: '600', marginTop: '40px', marginBottom: '20px' }}>
-      Top Recommendations
-    </h2>
-    <p style={{ marginBottom: '20px' }}>
-      Here are the best options to consider for your setup.
-    </p>
-    <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '28px', fontWeight: '600', marginTop: '40px', marginBottom: '20px' }}>
-      How to Choose
-    </h2>
-    <p style={{ marginBottom: '20px' }}>
-      Look for quality, reliability, and value that fits your workflow.
-    </p>
-  `;
 }
