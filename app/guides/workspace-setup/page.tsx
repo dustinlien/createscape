@@ -92,7 +92,7 @@ export default function WorkspaceSetupGuide() {
             <li style={{ marginBottom: '16px' }}>
               <strong style={{ color: 'var(--canvas)' }}>Distractions minimized</strong>
               <br />
-              <span style={{ fontSize: '14px' }}>Acoustic treatment, organization, focus-friendly design. <a href="/posts/acoustic-panels" style={{ color: 'var(--blueprint)' }}>Sound isolation →</a></span>
+              <span style={{ fontSize: '14px' }}>Acoustic treatment, organization, focus-friendly design. <a href="/posts/lighting-biophilic" style={{ color: 'var(--blueprint)' }}>Studio setup →</a></span>
             </li>
           </ol>
         </section>

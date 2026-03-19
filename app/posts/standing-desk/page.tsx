@@ -124,7 +124,7 @@ export default function StandingDeskPost() {
             </div>
 
             <p style={{ color: 'var(--n-600)' }}>
-              <a href="https://amazon.com/s?k=creator+workspace+equipment&tag=createscape-20" style={{ color: 'var(--ember)', fontWeight: '600', textDecoration: 'none' }}>
+              <a href="https://amazon.com/dp/B08XZJDCD7?tag=createscape-20&tag=createscape-20" style={{ color: 'var(--ember)', fontWeight: '600', textDecoration: 'none' }}>
                 → Check current price & reviews
               </a>
             </p>
@@ -168,7 +168,7 @@ export default function StandingDeskPost() {
             </div>
 
             <p style={{ color: 'var(--n-600)' }}>
-              <a href="https://amazon.com/s?k=creator+workspace+equipment&tag=createscape-20" style={{ color: 'var(--signal)', fontWeight: '600', textDecoration: 'none' }}>
+              <a href="https://amazon.com/dp/B08XZJDCD7?tag=createscape-20&tag=createscape-20" style={{ color: 'var(--signal)', fontWeight: '600', textDecoration: 'none' }}>
                 → Check current price & reviews
               </a>
             </p>
@@ -212,7 +212,7 @@ export default function StandingDeskPost() {
             </div>
 
             <p style={{ color: 'var(--n-600)' }}>
-              <a href="https://amazon.com/s?k=creator+workspace+equipment&tag=createscape-20" style={{ color: 'var(--broadcast)', fontWeight: '600', textDecoration: 'none' }}>
+              <a href="https://amazon.com/dp/B08XZJDCD7?tag=createscape-20&tag=createscape-20" style={{ color: 'var(--broadcast)', fontWeight: '600', textDecoration: 'none' }}>
                 → Check current price & reviews
               </a>
             </p>
