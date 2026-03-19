@@ -802,6 +802,44 @@ export default function Home() {
         }
 
         
+        
+        @media (max-width: 1024px) {
+          .about-grid {
+            grid-template-columns: 1fr;
+            gap: 48px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .section-title {
+            font-size: clamp(24px, 5vw, 32px);
+          }
+
+          .about-copy {
+            font-size: 15px;
+          }
+
+          .about-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .about-card {
+            padding: 16px;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 12px;
+          }
+
+          .about-card-icon {
+            font-size: 24px;
+            min-width: 32px;
+          }
+        }
+
         @media (max-width: 768px) {
           .newsletter-inner {
             grid-template-columns: 1fr;
@@ -823,6 +861,28 @@ export default function Home() {
         }
 
         
+        
+        @media (max-width: 480px) {
+          .guide-card-top {
+            height: 200px;
+          }
+
+          .guide-card-title {
+            font-size: 14px;
+            line-height: 1.3;
+          }
+
+          .guide-card-desc {
+            font-size: 13px;
+            display: none;
+          }
+
+          .guide-card-meta {
+            font-size: 11px;
+            gap: 8px;
+          }
+        }
+
         @media (max-width: 768px) {
           .footer-inner {
             flex-direction: column;
