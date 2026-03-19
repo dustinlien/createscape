@@ -420,6 +420,8 @@ export default function Home() {
 
       <Navigation />
 
+      <script async data-uid="4b36611167" src="https://machina.kit.com/4b36611167/index.js"></script>
+
       <main>
         <section className="hero">
           <div className="hero-bg">
