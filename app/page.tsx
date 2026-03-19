@@ -894,7 +894,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg">
-          <img src="/hero-creator.jpg" alt="Creator at their workspace" />
+          <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=1600&h=900&fit=crop" alt="Creator at their workspace with professional setup including standing desk, monitor, and studio lighting" />
           <div className="hero-bg-overlay"></div>
         </div>
 
