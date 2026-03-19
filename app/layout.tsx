@@ -2,12 +2,12 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Createscape — Creator Workspace Inspiration & Guides",
-  description: "Standing desks, ergonomic setups, lighting, audio equipment, and productivity optimization for content creators. Expert guides, honest reviews, real setups.",
+  title: "Createscape — Creator Workspace Guides",
+  description: "Standing desks, ergonomic chairs, lighting, audio equipment, and cameras for content creators. Honest reviews, real comparisons, no BS.",
   keywords: "creator workspace, standing desk, ergonomic setup, podcast equipment, streaming setup, workspace inspiration",
   openGraph: {
-    title: "Createscape — Creator Workspace Inspiration & Guides",
-    description: "Expert workspace guides for YouTube creators, podcasters, and streamers. Product reviews, setup comparisons, and real creator examples.",
+    title: "Createscape — Creator Workspace Guides",
+    description: "Honest workspace guides for creators. Product reviews, setup comparisons, and budget breakdowns.",
     url: "https://www.createscape.co",
     siteName: "Createscape",
     images: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "https://www.createscape.co/og-image-homepage.png",
         width: 1200,
         height: 630,
-        alt: "Createscape - Creator workspace inspiration and guides for standing desks, ergonomics, lighting, audio, and productivity"
+        alt: "Createscape - Creator workspace guides"
       }
     ],
     locale: "en_US",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Createscape — Creator Workspace Inspiration & Guides",
-    description: "Standing desks, ergonomic setups, lighting, audio equipment guides for creators",
+    title: "Createscape — Creator Workspace Guides",
+    description: "Honest workspace guides for creators",
     images: ["https://www.createscape.co/og-image-homepage.png"]
   },
   robots: {
