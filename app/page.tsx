@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [navOpen, setNavOpen] = useState(false)
   useEffect(() => {
     const words = document.querySelectorAll('.cycle-word')
     let current = 0
@@ -107,6 +108,81 @@ export default function Home() {
         }
 
         .nav-cta:hover { opacity: 0.88; }
+
+        .hamburger {
+          display: none;
+          flex-direction: column;
+          gap: 5px;
+          cursor: pointer;
+          background: none;
+          border: none;
+          padding: 8px;
+          margin-right: 12px;
+        }
+
+        .hamburger span {
+          width: 24px;
+          height: 2px;
+          background: var(--canvas);
+          transition: all 0.3s;
+          display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+          .hamburger {
+            display: flex;
+          }
+
+          .nav-links {
+            position: absolute;
+            top: 64px;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            gap: 0;
+            background: rgba(14,14,20,0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+          }
+
+          .nav-links.active {
+            max-height: 300px;
+          }
+
+          .nav-links li {
+            margin: 0;
+          }
+
+          .nav-links a {
+            display: block;
+            padding: 12px 0;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+          }
+
+          .nav-cta {
+            margin-top: 12px;
+            width: 100%;
+            text-align: center;
+            display: block !important;
+          }
+        }
 
         /* ─── HERO ─────────────────────────────────────── */
         .hero {
@@ -1009,10 +1085,21 @@ export default function Home() {
       {/* NAV */}
       <nav>
         <a href="/" className="nav-logo">Create<span>scape</span></a>
-        <ul className="nav-links">
-          <li><a href="/posts">Guides</a></li>
-          <li><a href="/categories">Categories</a></li>
-          <li><a href="#newsletter" className="nav-cta">Get the newsletter</a></li>
+        
+        <button 
+          className={navOpen ? "hamburger active" : "hamburger"}
+          onClick={() => setNavOpen(!navOpen)}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={navOpen ? "nav-links active" : "nav-links"}>
+          <li><a href="/posts" onClick={() => setNavOpen(false)}>Guides</a></li>
+          <li><a href="/categories" onClick={() => setNavOpen(false)}>Categories</a></li>
+          <li><a href="#newsletter" className="nav-cta" onClick={() => setNavOpen(false)}>Get the newsletter</a></li>
         </ul>
       </nav>
 
