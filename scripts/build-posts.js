@@ -91,9 +91,14 @@ function convertMarkdownToJSX(md) {
   // Generate JSX
   return components.map(comp => {
     let text = comp.text
+      // Process markdown formatting FIRST (before escaping)
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style={{color: "var(--signal)", textDecoration: "underline"}}>$1</a>')
+      .replace(/\`([^\`]+)\`/g, '<code style={{background: "var(--n-100)", padding: "2px 6px", borderRadius: "3px", fontFamily: "monospace"}}>$1</code>');
+    
+    // Escape quotes for JSX embedding
+    let escaped = text.replace(/'/g, "\\'").replace(/"/g, '\\"');
     
     switch(comp.type) {
       case 'h1':
@@ -103,9 +108,9 @@ function convertMarkdownToJSX(md) {
       case 'h3':
         return `<h3 style={{ fontFamily: "'Syne', sans-serif", fontSize: '20px', fontWeight: '600', marginTop: '30px', marginBottom: '16px' }}>${text}</h3>`;
       case 'li':
-        return `<li style={{ marginLeft: '20px', marginBottom: '8px' }}><span dangerouslySetInnerHTML={{ __html: '${text.replace(/'/g, "\\'").replace(/"/g, '\\"')}' }} /></li>`;
+        return `<li style={{ marginLeft: '20px', marginBottom: '8px' }}><span dangerouslySetInnerHTML={{ __html: '${escaped}' }} /></li>`;
       case 'p':
-        return `<p style={{ marginBottom: '20px' }}><span dangerouslySetInnerHTML={{ __html: '${text.replace(/'/g, "\\'").replace(/"/g, '\\"')}' }} /></p>`;
+        return `<p style={{ marginBottom: '20px' }}><span dangerouslySetInnerHTML={{ __html: '${escaped}' }} /></p>`;
       default:
         return '';
     }
