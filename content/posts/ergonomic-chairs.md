@@ -203,3 +203,205 @@ Occasional sitting? Secretlab Titan is fine.
 Have back pain? Herman Miller Aeron. Warranty backs it up.
 
 Buy the best chair you can afford. You'll spend more hours sitting in it than driving your car.
+
+## Deep Dive: Lower Back Pain & Chair Selection
+
+Lower back pain is the #1 complaint from creators who sit 8+ hours daily.
+
+**Root causes:**
+- Chair lumbar support doesn't match your spine curve
+- Seat depth too deep (legs cut off blood flow)
+- Armrests at wrong height (shoulder strain)
+- No regular movement (static = bad)
+
+**How to fix with right chair:**
+- Lumbar support adjustable to YOUR curve (not one-size-fits-all)
+- Seat depth lets thighs extend freely (not compressed)
+- Armrests support without shoulder shrug
+- Recline option for movement breaks
+
+**Herman Miller Aeron advantage:** Adjustable lumbar (up/down/forward/back). Fits more body types.
+
+**Steelcase Leap advantage:** LiveLumbar technology auto-adjusts. Less manual tweaking.
+
+**Secretlab disadvantage:** Fixed lumbar support. If it doesn't match your spine, pain persists.
+
+## The Adjustment Protocol (20 Minutes)
+
+Most people buy expensive chairs and never adjust them.
+
+**Step 1 - Lumbar Support (5 min)**
+1. Sit back in chair
+2. Locate the curve at bottom of your spine (sacrum)
+3. Adjust lumbar support to touch that curve
+4. Not touching? Too high or too low. Move it.
+5. Does it feel natural? That's right.
+
+**Step 2 - Seat Height (3 min)**
+1. Feet flat on ground
+2. Thighs parallel to desk
+3. Arms bent 90° while typing
+4. If feet dangle: add footrest ($30)
+
+**Step 3 - Seat Depth (3 min)**
+1. Sit back fully
+2. Measure 2-3 finger gaps between seat edge and back of knees
+3. Too close? Legs cramp. Too far? Weight on thighs.
+
+**Step 4 - Armrests (3 min)**
+1. Sit at desk
+2. Rest arms on armrest while typing
+3. Shoulders should NOT shrug up
+4. If too high: adjust down. If too low: adjust up.
+
+**Step 5 - Recline Tension (3 min)**
+1. Lean back slowly
+2. Chair should support smoothly
+3. Not too loose (falls back), not too tight (won't recline)
+4. Should feel controlled and stable
+
+Get this right and pain disappears within days.
+
+## The Warranty Reality
+
+**Herman Miller 12-year warranty:**
+- Covers: Manufacturing defects, structural issues, foam breakdown
+- What it means: If chair breaks, they replace it
+- Reality: Rarely needed. These chairs last 12+ years anyway
+
+**Steelcase 12-year warranty:**
+- Same coverage as Herman Miller
+- Equally reliable
+- Same: Both are industry standard
+
+**Secretlab 10-year warranty:**
+- Same coverage, 10 years instead of 12
+- Reality: Foam breaks down at 4-5 years (normal wear), not covered
+- After 5 years: Replacement foam costs $100-200
+
+**Real truth:** Don't buy chair for warranty. Buy for how it feels now. Warranty is backup.
+
+## Weight & Body Type Considerations
+
+**Under 150 lbs:**
+- All three chairs work fine
+- Secretlab is fine (designed for this range)
+- Herman Miller overkill but works better
+
+**150-200 lbs:**
+- Secretlab getting close to limits
+- Steelcase better (rated to 300 lbs)
+- Herman Miller ideal
+
+**200-250 lbs:**
+- Secretlab not recommended (foam breaks down faster)
+- Steelcase excellent choice
+- Herman Miller necessary (only option for long-term)
+
+**250+ lbs:**
+- Secretlab will fail
+- Steelcase is your chair
+- Herman Miller is your chair
+
+Don't guess your body. Measure. Then pick chair.
+
+## The Real Cost Over Time
+
+**Secretlab Titan ($379):**
+- Year 1-3: Excellent (no issues)
+- Year 4-5: Foam compresses, lumbar support weakens
+- Cost to replace: $379 new or $200 replacement foam
+- 5-year cost: $379
+- Per-year cost: $76/year
+
+**Steelcase Leap ($1,018):**
+- Year 1-10: Excellent (lasts)
+- Year 10+: Still works (just aging)
+- Cost to replace foam: ~$300
+- 10-year cost: $1,018 (maybe + $300 foam)
+- Per-year cost: $102-132/year
+
+**Herman Miller Aeron ($1,395):**
+- Year 1-12: Excellent
+- Year 12+: Still works (legendary durability)
+- Cost to replace foam: ~$400
+- 12-year cost: $1,395 (maybe + $400)
+- Per-year cost: $116-149/year
+
+**Over 10 years:**
+- Secretlab: Replace once = $758
+- Steelcase: One chair = $1,018-1,318
+- Herman Miller: One chair = $1,395-1,795
+
+Steelcase wins on cost-per-year if you sit 8+ hours daily.
+
+## Office Chair vs Gaming Chair vs Creator Chair
+
+**Gaming chairs** ($150-400):
+- Optimized for: Reclining while playing
+- Bad for: All-day sitting (no proper support)
+- Better for: 2-3 hour sessions, back support isn't critical
+
+**Office chairs** ($300-2000):
+- Optimized for: 8+ hour all-day sitting
+- Good for: Back support, adjustability, long-term comfort
+- Better for: Creators (this is us)
+
+**Creator chairs:** Just office chairs marketed differently. Secretlab, Autonomous = office chairs with gaming aesthetics.
+
+**Real talk:** Gaming chair ≠ office chair. Different priorities. Pick based on actual use, not brand.
+
+## The Movement Factor
+
+Here's what expensive chair makers don't tell you: **Movement > Perfect Chair**
+
+Sitting for 8 hours in perfect chair = bad.
+Sitting for 6 hours + 2 hours standing + movement breaks = good.
+
+**Real workflow:**
+- 90 min sitting
+- 10 min standing/stretching
+- Repeat
+
+Chair recline function helps with this. It gives you position variety.
+
+**Best cheap fix:** Standing desk riser + regular office chair = wins Aeron for movement patterns.
+
+## When to Replace Chair
+
+- **Lumbar support gone flat** (costs $300+ to replace)
+- **Foam sitting down** (irreversible, affects posture)
+- **Base or wheels broken** (harder to fix than worth)
+- **Armrests loose/broken** (usually repairable $50-100)
+- **If back pain returns after 3 months adjustment**
+
+Timeline: 3-5 years for Secretlab, 10+ for Steelcase/Aeron.
+
+## FAQ
+
+**Can I fix a broken Aeron myself?**
+Most parts are replaceable. Armrest wear? $50 replacement. Casters worn? $30 new set. It's designed for this.
+
+**Is mesh or fabric better?**
+Mesh: Cooler, easier to clean, shows wear cosmetically
+Fabric: Warmer, looks professional longer, harder to clean
+Neither affects comfort. Pick preference.
+
+**Should I add lumbar pillow to cheaper chair?**
+No. Pillow moves around. Chair support that's adjustable is better.
+
+**Can I use chair at standing desk?**
+Yes, but sitting while desk is standing = awkward. Use at normal height.
+
+**Do I need chair mat?**
+On carpet: yes (chair sinks without it). On hardwood/laminate: no (but mat adds smoothness).
+
+## Bottom Line
+
+Buy the best chair you can afford TODAY. Not "someday."
+
+Under $500? Secretlab.
+$500-1200? Steelcase Leap.
+$1200+? Herman Miller.
+
+But most important: **Adjust it correctly.** Spend 20 minutes. Most pain comes from wrong adjustment, not wrong chair.

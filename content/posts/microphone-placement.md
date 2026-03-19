@@ -412,3 +412,189 @@ Never cheap out on storage. Backup everything.
 EOF
 
 echo "✅ All 16 posts completed with full substance"
+
+## Mic Isolation & Vibration Control
+
+Keyboard typing comes through if mic isn't isolated from desk.
+
+**Why it happens:**
+- Boom arm mounted to desk
+- Typing vibration travels through arm
+- Mic picks it up
+- Audible in recording (clickety-click sound)
+
+**Solution: Shock mount**
+- Isolates mic from vibrations
+- Attaches between boom arm and mic
+- Reduces desk noise 80%+
+
+**Cost:** $20-40 for good shock mount
+
+**Is it necessary?** Only if you type a lot during recording. Podcasters/streamers: yes. Interview-only: maybe not.
+
+## Proximity Effect (The Secret of Pro Audio)
+
+Proximity effect = bass boost when mic is close.
+
+**What it is:**
+- Close to mic (2-4 inches): Boomy, deep
+- Far from mic (12+ inches): Thin, distant
+
+**How to use it:**
+- Want deep voice? Get close (4-6 inches)
+- Want natural voice? Get medium (6-10 inches)
+- Want thin voice (less common): Get far (12+)
+
+**Pro tip:** Most male voices sound better close (adds warmth). Most female voices sound better medium distance (avoids boominess).
+
+Test at different distances. Pick what sounds best to your ears.
+
+## Pop Filter Reality
+
+Pop filter reduces plosives (p, b, t sounds).
+
+**What plosives are:**
+- Hard consonant sounds that create air bursts
+- Hit mic = distorted/popping sound
+- Annoying in audio
+
+**How pop filter works:**
+- Fabric barrier between mouth and mic
+- Disperses air burst
+- Reduces plosive 60-70%
+
+**Cost:** $15-30 for decent one
+
+**Is it necessary?** Helpful but not mandatory. Can learn to angle mic away from plosives instead.
+
+## Boom Arm Stability Test
+
+Boom arm quality matters. Cheap = wobbly.
+
+**Test:**
+1. Mount boom arm to desk
+2. Put mic in shock mount
+3. Tap the arm sharply
+4. Does mic stay level? Or bounce around?
+
+If bouncy: Cheap arm. Buy better one.
+
+If stable: Good arm. You're set.
+
+## Desk Vibration Issues
+
+Cheap desks transmit vibrations. Worse with boom arm mounted.
+
+**Solutions (in order of cost):**
+1. Don't type hard (adjust typing style) = free
+2. Add isolation feet ($20-30) = cheap
+3. Boom arm to wall instead of desk ($100+ installation) = medium
+4. Upgrade desk ($500+) = expensive
+
+**Real fix:** Most common = just be aware while recording. Pause before typing. Resume after.
+
+## Monitor Arm + Mic Arm Conflict
+
+If your monitor arm and mic boom arm are on same desk, they might interfere.
+
+**Solutions:**
+- Mount mic boom to monitor arm (reduces desk vibration)
+- Mount monitor arm on opposite side
+- Use monitor stand + separate boom arm
+
+Some boom arms (Rode Mic Arm Plus) specifically attach to monitor arms. Smart solution.
+
+## Cable Routing from Boom Arm
+
+Where the XLR cable goes matters.
+
+**Best practice:**
+- Route cable down boom arm (not away)
+- Tape to arm loosely (let slack)
+- Route under desk to audio interface
+- Secure with clips
+
+This keeps cable tension off mic and boom arm.
+
+## Mic Height During Recording
+
+Mic height matters for on-camera appearance.
+
+**When mic is visible (podcast aesthetic):**
+- Mic at mouth height
+- Slightly off to side (60-degree angle)
+- Should look intentional, not hidden
+
+**When mic is hidden (vlog style):**
+- Mic above head (lavalier style)
+- Or below desk (shotgun mic style)
+- Should not appear in frame
+
+Position based on your content style.
+
+## Real vs Perceived Mic Quality
+
+People think expensive mic = better sound.
+
+**Reality:**
+- $59 Rode Lav + good placement > $300 mic + bad placement
+- Mic quality: 40% of sound
+- Placement: 40% of sound
+- Room acoustics: 20% of sound
+
+**Implication:** Don't spend $300 on mic if placement is wrong.
+
+Fix placement first. Upgrade mic later if needed.
+
+## Monitoring While Recording
+
+Can you hear yourself while recording?
+
+**Options:**
+1. Direct monitoring (interface has headphone out)
+2. Software monitoring (add latency, not ideal)
+3. No monitoring (risky, can't catch mistakes)
+
+**Best:** Interface with direct monitoring. Monitor yourself in real-time. Zero latency.
+
+If interface lacks this: Add audio interface ($100-150).
+
+## Recording Levels
+
+Proper level = no clipping, no noise floor.
+
+**Target:** Peak at -6dB to -3dB (leave headroom)
+
+**How to set:**
+1. Record yourself talking normally
+2. Check peak level
+3. If below -12dB: Raise input gain
+4. If above 0dB: Lower input gain (you're clipping)
+5. Re-record test. Adjust. Repeat until -6 to -3dB
+
+Takes 5 minutes. Prevents ruined recordings.
+
+## FAQ
+
+**Do I need shock mount?**
+Not always. Only if desk vibrations are audible in recordings.
+
+**Should mic be visible on camera?**
+Depends on your brand. Podcasters: often yes. Vloggers: often hidden.
+
+**How far should I be from mic?**
+6-8 inches for most content. Test at 4, 6, 8, 10 inches. Pick best.
+
+**Can I use wireless mic?**
+Yes, but wired (boom arm) is more reliable for stationary recording.
+
+**What if I can't mount boom arm?**
+Microphone stand works. Takes more desk space. Less stable but functional.
+
+## Bottom Line
+
+Boom arm ($30) + shock mount ($30) + proper distance (6-8 inches) + levels (-6dB) = professional audio.
+
+Placement matters more than mic cost.
+
+Don't overthink. Get basics right, then upgrade if needed.

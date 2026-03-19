@@ -162,3 +162,171 @@ Upgrade to Adam T7V later if you get serious.
 Or if you know you're serious: buy Adam T7V now. Don't upgrade later.
 
 Never buy expensive monitors for untreated room. Waste of money.
+
+## Why Monitor Speakers Matter for Mixing
+
+Most creators skip monitors and use headphones. Mistake.
+
+**Headphone problems:**
+- Isolation causes ear fatigue (extended sessions)
+- Frequency response varies wildly by model
+- You can't hear room reflections (your actual playback environment)
+- Stereo image is exaggerated (close to ears)
+
+**Monitor advantages:**
+- Reveal actual frequency response
+- You hear what real speakers in real room sound like
+- Stereo image matches real listening
+
+**Real workflow:**
+1. Mix on monitors (reference truth)
+2. Check on headphones (mobile listening)
+3. Check on phone speaker (smallest device)
+4. If it works on all three: it translates
+
+Skip monitors = mixing in dark. You'll get rhythm right, then frequencies wrong.
+
+## Room Acoustics Matter More Than Speakers
+
+$500 monitors in untreated room < $150 monitors in treated room.
+
+**Why:**
+- Room reflections color everything (bass builds up, mids get muddy)
+- Your ears hear reflected sound + direct sound
+- Bad room = bad mixing decisions
+
+**Budget room treatment:**
+- Carpeting: $50-150
+- Heavy curtains: $50-100
+- Bass traps (corner absorption): $100-300
+- Acoustic panels: $200-500
+
+Spend money on room before monitors.
+
+## Nearfield vs Farfield Monitors
+
+**Nearfield** ($150-400):
+- Close listening (2-4 feet)
+- Less room influence
+- Good for treated rooms
+- Good for small spaces
+
+**Farfield** ($400-2000+):
+- Distance listening (6-10 feet)
+- More room influence
+- Need well-treated room
+- Professional studios
+
+For creators in home studio: Nearfield.
+
+## Speaker Placement (Critical)
+
+Bad placement kills accuracy.
+
+**Right way:**
+- Monitors on stands (not desk surface)
+- Tweeter at ear height (when sitting)
+- Speakers equidistant from ears (forming triangle)
+- Away from walls (1-2 feet minimum)
+- Angled toward listening position
+
+**Wrong way:**
+- On desk surface (resonance issues)
+- Below ear height (loses detail)
+- Against wall (bass buildup)
+- Facing away from you
+
+Test: Move one speaker 6 inches. Listen. You'll hear difference immediately.
+
+## Monitor Controller (Often Forgotten)
+
+You need volume control between speakers and audio interface.
+
+**Options:**
+1. Built into interface ($0, if interface has output knob)
+2. Dedicated controller ($50-300)
+3. Software volume (NOT recommended - loses headroom)
+
+**Why:** Direct interface connection = no volume control = levels too high/low = bad mixing reference.
+
+**Budget:**
+- Cheap controller: $50-100 (works fine)
+- Good controller: $200-300 (Audient, Presonus)
+
+Don't skip this. It's as important as speakers.
+
+## Speaker Comparison Details
+
+### Adam Audio T7V Advantages
+- Dual tweeter design (more accurate highs)
+- Room control features (EQ switches for placement)
+- AES waveform tech (competitor advantage)
+- Warm, pleasant sound (good for long sessions)
+
+**Best if:** Untreated room, need flexibility, want pleasant sound
+
+### JBL 305P Advantages
+- Cheapest option ($149)
+- Surprisingly flat response
+- Good bass for compact size
+- Professional pedigree (used in studios)
+
+**Best if:** Budget <$150, room already good, willing to optimize placement
+
+### Yamaha HS5 Advantages
+- Most balanced (not too bright, not too warm)
+- Consistent across model range (5, 7, 8 sizes)
+- Professional standard (used worldwide)
+- Good warranty
+
+**Best if:** Want "safe" choice, professional setup, will treat room
+
+## The Full Setup Budget
+
+**Budget monitors ($150-200):**
+- Speakers: $300 pair
+- Stands: $40-60
+- Controller: $50-100
+- Cables: $20-30
+- Total: $410-490
+
+**Professional monitors ($300-400):**
+- Speakers: $600 pair
+- Stands: $80-120
+- Controller: $150-200
+- Acoustic panels: $200-400
+- Cables: $30-50
+- Total: $1060-1370
+
+## Common Mixing Mistakes With Monitors
+
+1. **Mixing too loud** (ears adapt, you turn it down, then sounds thin elsewhere)
+2. **Untreated room bass buildup** (mix bass wrong, sounds thin on other systems)
+3. **No headphone reference** (mix on monitors, check on headphones = disappointment)
+4. **Too close to wall** (bass reinforcement, frequencies muddy)
+5. **Tweeter not at ear height** (lose high-frequency detail)
+
+## FAQ
+
+**Can I use consumer speakers as monitors?**
+No. Consumer speakers boost bass/treble (entertainment curve). You need flat (truth).
+
+**Should I buy matched pair?**
+Yes. Different speakers = stereo image nightmare. Buy pair from same brand/model.
+
+**Do I need subwoofer?**
+Only if room is large (>200 sq ft) and you're mixing bass-heavy content. Most creators skip it.
+
+**What about Bluetooth speakers?**
+Compression = no good for mixing. Wired only.
+
+**How often should I replace monitors?**
+Drivers age (tweeter loses brightness). 5-10 years reasonable. Degradation is gradual.
+
+## Bottom Line
+
+Adam T7V if you can spend $300. JBL 305P if budget <$150.
+
+Either way: Treat your room first. Monitors second. Controller mandatory.
+
+Mix on monitors. Reference on headphones. Only way to get translation right.
