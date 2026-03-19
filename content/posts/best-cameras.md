@@ -218,3 +218,162 @@ All three can. But they're optimized for video. If you need 50/50 photos + video
 - **Moving around a lot?** DJI Osmo ($400). Best stabilization.
 
 Pick one. Learn it deeply. Upgrade lenses before upgrading body. Shoot good light. Get real audio. The camera matters less than you think.
+
+## Sensor Size & Image Quality Deep Dive
+
+All three cameras have similar sensors (APS-C 24MP).
+
+**What that means:**
+- Dynamic range is similar (8-10 stops)
+- Low-light performance is similar
+- Image quality differences are minor (5%)
+
+**What matters more:**
+- Lens quality (huge difference)
+- Lighting (bigger difference than camera)
+- Auto-focus performance (most important)
+
+## Autofocus Reality Check
+
+This is where cameras actually differ:
+
+**Sony A6400:** Eye AF + object tracking. If you move, it follows face/eyes.
+
+**Canon R50:** Face AF + eye-detect. Good but not as aggressive as Sony.
+
+**DJI Osmo:** Phone AF (depends on phone). Often hunts in low light.
+
+For creators who move: Sony wins. For static interviews: all three equal.
+
+## The Lens Tax
+
+Body costs $600-800. Lenses cost $300-2000+.
+
+**Sony A6400 cheap lens:** 18-135mm kit = $400 (total $1200)
+**Canon R50 cheap lens:** 18-45mm kit = $200 (total $800)
+
+But cheap kit lenses look... cheap.
+
+**Better lens:**
+- Sony: Sigma 16mm f/2.8 = $400 (total $1200)
+- Canon: RF 24mm f/2.8 = $300 (total $900)
+
+Budget your lens separately. Body alone isn't the full cost.
+
+## Low-Light Performance
+
+All three handle low light similarly.
+
+**Key:** Use f/1.8-2.8 lenses (wider aperture = more light)
+
+Test: Record in office with only desk lamp.
+- f/5.6 kit lens: Grainy, needs lighting
+- f/1.8 lens: Clean, well-exposed
+- Camera brand: Doesn't matter (lens matters)
+
+## Autofocus in Motion
+
+Where cameras differ most:
+
+**Tracking accuracy:**
+- Sony A6400: 95% (best for movement)
+- Canon R50: 85% (good for movement)
+- DJI Osmo: 90% (gimbal helps)
+
+For talking-head content: doesn't matter.
+For vlogging/moving: Sony wins.
+
+## Recording Formats & File Sizes
+
+**Sony:** H.264/H.265 codec
+- 1080p 60fps: 400MB per minute
+- 4K 30fps: 700MB per minute
+
+**Canon:** H.264
+- 1080p 60fps: 350MB per minute
+- 4K 30fps: 750MB per minute
+
+**DJI:** Varies by phone
+
+**Reality:** 1-hour vlog = 20-40GB. Budget fast SD cards + storage.
+
+## Battery Life Real Test
+
+**Sony A6400:** 3.5 hours continuous video (rated 400 shots)
+
+**Canon R50:** 3 hours continuous video (rated 370 shots)
+
+**DJI Osmo:** 15+ hours (gimbal battery)
+
+For 1-hour recording: Need backup battery with Sony/Canon.
+
+DJI wins battery life (gimbal battery is large).
+
+## Stabilization Comparison
+
+**Sony + handheld:** Wobbly. Need tripod or gimbal.
+
+**Canon + handheld:** Wobbly. Need tripod or gimbal.
+
+**DJI Osmo:** Gimbal built-in. Smooth without tripod.
+
+For vlogging while walking: DJI.
+For talking-head setup: Don't matter.
+
+## When to Upgrade from Phone
+
+**Use phone when:**
+- Building initial audience (0-1000 subscribers)
+- Testing format (unsure if you'll continue)
+- Short-form content (reels, TikTok)
+
+**Upgrade to camera when:**
+- 1000+ subscribers (audience exists)
+- Committed to format (posting 2+ weeks)
+- Long-form content (streams, podcasts)
+- Income from content (justifies investment)
+
+Most creators upgrade too early.
+
+## Real Creator Workflows
+
+**YouTuber (talking head):**
+- Camera: Sony A6400 + 35mm f/1.8 lens
+- Setup: Tripod, ring light, USB mic
+- Why: Best autofocus for stationary setup
+
+**Vlogger (mobile):**
+- Camera: Phone + DJI Osmo gimbal
+- Setup: Minimal, mobile-optimized
+- Why: Stabilization matters more than image quality
+
+**Streamer:**
+- Camera: Canon R50
+- Setup: Monitor + capture card + stream PC
+- Why: Good autofocus, cheaper than Sony
+
+Pick based on workflow, not specs.
+
+## Rental vs Buy
+
+**Rent for:** Testing camera before $800 commitment
+**Cost:** $50-80 per day
+**Time:** 2-3 days to test thoroughly
+
+**Buy when:** You're sure (camera + lens = $1200+)
+
+Rent first. Then buy. Don't buy and return.
+
+## The Real Comparison Table
+
+| Metric | Sony | Canon | DJI |
+|--------|------|-------|-----|
+| Best for talking-head | Sony | ✓ | |
+| Best for vlogging | | | DJI |
+| Best autofocus | Sony | | |
+| Cheapest entry | | Canon | DJI |
+| Upgrade path | Best | Good | Limited |
+| Professional use | ✓ | ✓ | No |
+| Learning curve | High | Medium | Low |
+
+Choose based on workflow, not features.
