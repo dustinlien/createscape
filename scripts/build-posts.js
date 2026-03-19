@@ -40,24 +40,12 @@ files.forEach(file => {
 
 console.log('\n✅ All posts generated from markdown\n');
 
-// Convert markdown to JSX - properly parse and render content
+// Convert markdown to JSX components
 function convertMarkdownToJSX(md) {
-  if (!md) return '<p>No content</p>';
+  if (!md) return '[]';
   
-  // Escape special characters for JSX
   let lines = md.split('\n');
-  let result = [];
-  
-  function escapeJSX(text) {
-    return text
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;')
-      .replace(/"/g, '&quot;')  // smart quotes
-      .replace(/"/g, '&quot;');  // smart quotes
-  }
+  let components = [];
   
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i].trim();
@@ -65,35 +53,63 @@ function convertMarkdownToJSX(md) {
     
     // Headings
     if (line.startsWith('### ')) {
-      let content = escapeJSX(line.substring(4));
-      result.push('<h3 style={{ fontFamily: "Syne, sans-serif", fontSize: "20px", fontWeight: "600", marginTop: "30px", marginBottom: "16px" }}>' + content + '</h3>');
+      let text = line.substring(4);
+      components.push({
+        type: 'h3',
+        text: text
+      });
     } else if (line.startsWith('## ')) {
-      let content = escapeJSX(line.substring(3));
-      result.push('<h2 style={{ fontFamily: "Syne, sans-serif", fontSize: "28px", fontWeight: "600", marginTop: "40px", marginBottom: "20px" }}>' + content + '</h2>');
+      let text = line.substring(3);
+      components.push({
+        type: 'h2',
+        text: text
+      });
     } else if (line.startsWith('# ')) {
-      let content = escapeJSX(line.substring(2));
-      result.push('<h1 style={{ fontFamily: "Syne, sans-serif", fontSize: "36px", fontWeight: "700", marginTop: "50px", marginBottom: "24px" }}>' + content + '</h1>');
+      let text = line.substring(2);
+      components.push({
+        type: 'h1',
+        text: text
+      });
     }
     // Bullet points
     else if (line.startsWith('- ')) {
-      let content = escapeJSX(line.substring(2));
-      result.push('<li style={{ marginLeft: "20px", marginBottom: "8px" }}>' + content + '</li>');
+      let text = line.substring(2);
+      components.push({
+        type: 'li',
+        text: text
+      });
     }
     // Regular paragraph
     else if (line.length > 0) {
-      // Process inline formatting
-      let processed = escapeJSX(line)
-        .replace(/&lt;strong&gt;([^<]+)&lt;\/strong&gt;/g, '<strong>$1</strong>')
-        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style={{ color: "var(--signal)", textDecoration: "underline" }}>$1</a>')
-        .replace(/\`([^\`]+)\`/g, '<code style={{ background: "var(--n-100)", padding: "2px 6px", borderRadius: "3px", fontFamily: "monospace" }}>$1</code>');
-      
-      result.push('<p style={{ marginBottom: "20px" }}>' + processed + '</p>');
+      components.push({
+        type: 'p',
+        text: line
+      });
     }
   }
   
-  return result.join('\n  ');
+  // Generate JSX
+  return components.map(comp => {
+    let text = comp.text
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    
+    switch(comp.type) {
+      case 'h1':
+        return `<h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '36px', fontWeight: '700', marginTop: '50px', marginBottom: '24px' }}>${text}</h1>`;
+      case 'h2':
+        return `<h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '28px', fontWeight: '600', marginTop: '40px', marginBottom: '20px' }}>${text}</h2>`;
+      case 'h3':
+        return `<h3 style={{ fontFamily: "'Syne', sans-serif", fontSize: '20px', fontWeight: '600', marginTop: '30px', marginBottom: '16px' }}>${text}</h3>`;
+      case 'li':
+        return `<li style={{ marginLeft: '20px', marginBottom: '8px' }}><span dangerouslySetInnerHTML={{ __html: '${text.replace(/'/g, "\\'").replace(/"/g, '\\"')}' }} /></li>`;
+      case 'p':
+        return `<p style={{ marginBottom: '20px' }}><span dangerouslySetInnerHTML={{ __html: '${text.replace(/'/g, "\\'").replace(/"/g, '\\"')}' }} /></p>`;
+      default:
+        return '';
+    }
+  }).join('\n          ');
 }
 
 // Generate post component template
@@ -102,7 +118,7 @@ function generatePostTSX(slug, frontmatter, mdContent, allProducts) {
     .map(id => allProducts.find(p => p.id === id))
     .filter(Boolean);
 
-  const bodyContent = convertMarkdownToJSX(mdContent);
+  const bodyJSX = convertMarkdownToJSX(mdContent);
   const productsJSON = JSON.stringify(relatedProducts, null, 2);
 
   return `import { Metadata } from 'next'
@@ -147,7 +163,7 @@ export default function Post() {
         </header>
 
         <section style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--void)' }}>
-          ${bodyContent}
+          ${bodyJSX}
         </section>
 
         {/* Related Products */}
