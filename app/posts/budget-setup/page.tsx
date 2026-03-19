@@ -146,7 +146,19 @@ export default function BudgetSetupPost() {
             </p>
           </div>
         </section>
-      </article>
+      
+          <div style={{ marginTop: '60px', paddingTop: '40px', borderTop: '2px solid var(--n-100)' }}>
+            <h3 style={{ fontFamily: "'Syne', sans-serif", fontSize: '18px', fontWeight: '600', marginBottom: '16px', color: 'var(--void)' }}>
+              Browse products on Amazon
+            </h3>
+            <p style={{ color: 'var(--n-600)', marginBottom: '12px' }}>
+              As an Amazon Associate, Createscape earns from qualifying purchases.
+            </p>
+            <a href="https://amazon.com/s?k=affordable+desk+setup&tag=createscape-20" style={{ display: 'inline-block', background: 'var(--ember)', color: '#fff', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', fontSize: '14px' }}>
+              View on Amazon →
+            </a>
+          </div>
+        </article>
     </main>
   )
 }
