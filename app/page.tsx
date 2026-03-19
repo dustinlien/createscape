@@ -762,6 +762,85 @@ export default function Home() {
           border-radius: 50%;
         }
 
+        
+        @media (max-width: 768px) {
+          .cat-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 480px) {
+          .cat-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        
+        @media (max-width: 1024px) {
+          .guides-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          }
+        }
+
+        @media (max-width: 768px) {
+          .guides-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .guides-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .guides-header {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+
+        
+        @media (max-width: 768px) {
+          .newsletter-inner {
+            grid-template-columns: 1fr;
+            gap: 32px;
+          }
+
+          .newsletter-title {
+            font-size: clamp(24px, 5vw, 32px);
+          }
+
+          .newsletter-row {
+            flex-direction: column;
+          }
+
+          .newsletter-input,
+          .newsletter-submit {
+            width: 100%;
+          }
+        }
+
+        
+        @media (max-width: 768px) {
+          .footer-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+          }
+
+          .footer-links {
+            flex-direction: column;
+            gap: 12px;
+          }
+
+          .footer-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+          }
+        }
+
         /* ─── ANIMATIONS ─────────────────────────────── */
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(24px); }
@@ -894,7 +973,7 @@ export default function Home() {
         <div className="container">
           <div className="guides-header">
             <div>
-              <div className="section-label">Latest guides</div>
+              <div className="section-label">Creator workspace guides</div>
               <h2 className="section-title">Start building<br />your setup.</h2>
             </div>
             <a href="/posts" className="view-all">View all guides</a>
