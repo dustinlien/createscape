@@ -1,0 +1,166 @@
+{
+  "products": [
+    {
+      "id": "uplift-v3",
+      "name": "Uplift V3",
+      "category": "Standing Desk",
+      "asin": "B08XZJDCD7",
+      "image": "https://m.media-amazon.com/images/I/81yPd-P5HzL._AC_SY300_.jpg",
+      "price": "$799-1099",
+      "features": ["Dual motors", "22.6-47.6 height", "7-year warranty"]
+    },
+    {
+      "id": "flexispot-e7",
+      "name": "FlexiSpot E7",
+      "category": "Standing Desk",
+      "asin": "B096JTBLPL",
+      "image": "https://m.media-amazon.com/images/I/81iKzXRSblL._AC_SY300_.jpg",
+      "price": "$499-699",
+      "features": ["Single motor", "Stable frame", "5-year warranty"]
+    },
+    {
+      "id": "autonomous",
+      "name": "Autonomous",
+      "category": "Standing Desk",
+      "asin": "B088S8GD79",
+      "image": "https://m.media-amazon.com/images/I/71B0bj0vwEL._AC_SY300_.jpg",
+      "price": "$599-799",
+      "features": ["Dual motors", "App control", "Modern design"]
+    },
+    {
+      "id": "herman-miller-aeron",
+      "name": "Herman Miller Aeron",
+      "category": "Chair",
+      "asin": "B00E3WJ1MA",
+      "image": "https://m.media-amazon.com/images/I/71kr3y-nSyL._AC_SY300_.jpg",
+      "price": "$1395",
+      "features": ["Premium build", "Lifetime warranty", "Best ergonomics"]
+    },
+    {
+      "id": "steelcase-leap",
+      "name": "Steelcase Leap",
+      "category": "Chair",
+      "asin": "B003BTMCDU",
+      "image": "https://m.media-amazon.com/images/I/71zr3OkuuCL._AC_SY300_.jpg",
+      "price": "$1018",
+      "features": ["High-back design", "12-year warranty", "Professional"]
+    },
+    {
+      "id": "secretlab-titan",
+      "name": "Secretlab Titan",
+      "category": "Chair",
+      "asin": "B08DTY63N1",
+      "image": "https://m.media-amazon.com/images/I/81xBBTH3aaL._AC_SY300_.jpg",
+      "price": "$379-449",
+      "features": ["Gaming comfort", "Premium materials", "Great value"]
+    },
+    {
+      "id": "sony-a6400",
+      "name": "Sony A6400",
+      "category": "Camera",
+      "asin": "B0842JSGTS",
+      "image": "https://m.media-amazon.com/images/I/71Wj1s8e7-L._AC_SY300_.jpg",
+      "price": "$748",
+      "features": ["4K video", "Fast autofocus", "Compact mirrorless"]
+    },
+    {
+      "id": "canon-r50",
+      "name": "Canon R50",
+      "category": "Camera",
+      "asin": "B0BYK7F3KJ",
+      "image": "https://m.media-amazon.com/images/I/812aJzqcG1L._AC_SY300_.jpg",
+      "price": "$599",
+      "features": ["Creator-focused", "4K video", "Affordable"]
+    },
+    {
+      "id": "dji-osmo",
+      "name": "DJI Osmo",
+      "category": "Camera",
+      "asin": "B0BZSVNZZ3",
+      "image": "https://m.media-amazon.com/images/I/61tLq5z2e8L._AC_SY300_.jpg",
+      "price": "$349-399",
+      "features": ["Gimbal stabilization", "Portable", "4K capable"]
+    },
+    {
+      "id": "shure-sm7b",
+      "name": "Shure SM7B",
+      "category": "Microphone",
+      "asin": "B0002GRBO0",
+      "image": "https://m.media-amazon.com/images/I/71TvCXqnhYL._AC_SY300_.jpg",
+      "price": "$399",
+      "features": ["Broadcast quality", "Industry standard", "Cardioid pattern"]
+    },
+    {
+      "id": "rode-procaster",
+      "name": "Rode Procaster",
+      "category": "Microphone",
+      "asin": "B008G0NK7M",
+      "image": "https://m.media-amazon.com/images/I/81PvvwFRr2L._AC_SY300_.jpg",
+      "price": "$199",
+      "features": ["Podcast-ready", "XLR output", "Rugged build"]
+    },
+    {
+      "id": "audio-technica-at4040",
+      "name": "Audio Technica AT4040",
+      "category": "Microphone",
+      "asin": "B00004Z1KL",
+      "image": "https://m.media-amazon.com/images/I/71MkHRJLF3L._AC_SY300_.jpg",
+      "price": "$249",
+      "features": ["Condenser mic", "Studio quality", "Cardioid"]
+    },
+    {
+      "id": "adam-audio-t7v",
+      "name": "Adam Audio T7V",
+      "category": "Speakers",
+      "asin": "B0742W3RLC",
+      "image": "https://m.media-amazon.com/images/I/710i4t2K8vL._AC_SY300_.jpg",
+      "price": "$298",
+      "features": ["Studio monitors", "Accurate sound", "Compact"]
+    },
+    {
+      "id": "jbl-305p",
+      "name": "JBL 305P",
+      "category": "Speakers",
+      "asin": "B07CQRV7KF",
+      "image": "https://m.media-amazon.com/images/I/71c2Nm9M9lL._AC_SY300_.jpg",
+      "price": "$149",
+      "features": ["Budget monitors", "Reliable", "Good value"]
+    },
+    {
+      "id": "yamaha-hs5",
+      "name": "Yamaha HS5",
+      "category": "Speakers",
+      "asin": "B01E6T56CM",
+      "image": "https://m.media-amazon.com/images/I/71iR2X3o-XL._AC_SY300_.jpg",
+      "price": "$155",
+      "features": ["Studio monitors", "Flat response", "Professional"]
+    },
+    {
+      "id": "neewer-ring-light",
+      "name": "Neewer Ring Light",
+      "category": "Lighting",
+      "asin": "B07ZRB1X5Q",
+      "image": "https://m.media-amazon.com/images/I/71xrMr1fT4L._AC_SY300_.jpg",
+      "price": "$45-65",
+      "features": ["Budget-friendly", "RGB color", "Phone mount"]
+    },
+    {
+      "id": "elgato-key-light",
+      "name": "Elgato Key Light",
+      "category": "Lighting",
+      "asin": "B07L755X39",
+      "image": "https://m.media-amazon.com/images/I/81e3VBi7ivL._AC_SY300_.jpg",
+      "price": "$200",
+      "features": ["Smart light", "App control", "Professional quality"]
+    },
+    {
+      "id": "elgato-4k60-pro",
+      "name": "Elgato 4K60 Pro",
+      "category": "Capture Card",
+      "asin": "B07JCSTBLV",
+      "image": "https://m.media-amazon.com/images/I/61h3bV-XQ2L._AC_SY300_.jpg",
+      "price": "$199",
+      "features": ["4K capture", "Zero lag", "Pro streaming"]
+    }
+  ]
+}
