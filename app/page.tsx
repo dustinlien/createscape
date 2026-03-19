@@ -939,7 +939,72 @@ export default function Home() {
           position: absolute;
           transform: translateY(-16px);
         }
-      `}</style>
+
+        /* ─── FAQ ────────────────────────────────── */
+        .faq {
+          background: var(--void);
+          padding: 80px 0;
+        }
+
+        .faq-header {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+
+        .faq-intro {
+          font-size: 16px;
+          color: var(--n-400);
+          margin-top: 16px;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .faq-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+
+        .faq-item {
+          padding: 28px;
+          background: rgba(255,255,255,0.02);
+          border: 1px solid var(--n-700);
+          border-radius: 12px;
+        }
+
+        .faq-question {
+          font-family: 'Syne', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--canvas);
+          margin-bottom: 12px;
+          letter-spacing: -0.01em;
+        }
+
+        .faq-answer {
+          font-size: 14px;
+          color: var(--n-400);
+          line-height: 1.7;
+          margin: 0;
+        }
+
+        @media (max-width: 768px) {
+          .faq {
+            padding: 60px 0;
+          }
+
+          .faq-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+          }
+
+          .faq-item {
+            padding: 20px;
+          }
+        }
+
+              `}</style>
 
       {/* NAV */}
       <nav>
@@ -982,51 +1047,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="about">
-        <div className="container">
-          <div className="about-grid">
-            <div>
-              <div className="section-label">What we're building</div>
-              <h2 className="section-title">Gear intel for people<br />who <em>actually ship.</em></h2>
-              <div className="about-copy">
-                <p>Most workspace content is either generic roundups or spec-sheet noise. We're building something different: <strong>honest, in-depth guides</strong> built around how creators actually work — from the developer with three monitors and a mechanical keyboard habit, to the podcaster who turned a closet into a proper studio.</p>
-                <p>Whether you're setting up your first proper home office or rebuilding from scratch, Createscape covers the decisions that matter: what to buy, what to skip, and what's actually worth the money.</p>
-                <p>And soon — <strong>real creator workspace features</strong>. Real people, real gear, real spaces you can actually get inspired by.</p>
-              </div>
-            </div>
-            <div className="about-right">
-              <div className="about-card">
-                <div className="about-card-icon">🎯</div>
-                <div>
-                  <div className="about-card-title">Built for all creator types</div>
-                  <div className="about-card-text">Developers, video creators, podcasters, streamers, writers — if you work from a desk, we've got you covered.</div>
-                </div>
-              </div>
-              <div className="about-card">
-                <div className="about-card-icon">🔧</div>
-                <div>
-                  <div className="about-card-title">Practical, not aspirational</div>
-                  <div className="about-card-text">We cover real budget ranges, real tradeoffs, and real setups — not just what looks good in a photoshoot.</div>
-                </div>
-              </div>
-              <div className="about-card">
-                <div className="about-card-icon">📸</div>
-                <div>
-                  <div className="about-card-title">Real creator workspaces, coming soon</div>
-                  <div className="about-card-text">We're building a directory of featured creator spaces — real people, real gear lists, real costs. No stock photos.</div>
-                </div>
-              </div>
-              <div className="about-card">
-                <div className="about-card-icon">✍️</div>
-                <div>
-                  <div className="about-card-title">Gear that actually ships</div>
-                  <div className="about-card-text">Every product we recommend is available to buy today. No vaporware, no out-of-stock dead ends.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* GUIDES */}
       <section className="guides">
@@ -1160,6 +1181,40 @@ export default function Home() {
       </section>
 
       {/* NEWSLETTER */}
+      
+      {/* FAQ */}
+      <section className="faq">
+        <div className="container">
+          <div className="faq-header">
+            <h2 className="section-title">Common questions about creator workspaces</h2>
+            <p className="faq-intro">Here's what creators ask most when building their setup.</p>
+          </div>
+          
+          <div className="faq-grid">
+            <div className="faq-item">
+              <h3 className="faq-question">What makes a good creator workspace?</h3>
+              <p className="faq-answer">Good lighting, ergonomic seating, quality audio equipment, and fast internet. Most importantly: a setup that lets you focus on making your best work without distractions.</p>
+            </div>
+            
+            <div className="faq-item">
+              <h3 className="faq-question">How much should I spend on a standing desk?</h3>
+              <p className="faq-answer">Budget options start at $300-500. Quality desks with good motors run $800-1500. The best ROI is usually $600-900 — solid build, good warranty, lasts 10+ years.</p>
+            </div>
+            
+            <div className="faq-item">
+              <h3 className="faq-question">Do I need a studio mic for podcasting?</h3>
+              <p className="faq-answer">Not necessarily. A decent USB mic ($80-150) works great. If you're serious, a good XLR setup ($200-500) gives you better sound and flexibility. Your first upgrade should be acoustic treatment, not gear.</p>
+            </div>
+            
+            <div className="faq-item">
+              <h3 className="faq-question">What's the cheapest way to set up a creator workspace?</h3>
+              <p className="faq-answer">Start with what you have. A basic setup: decent chair ($150-200), standing desk or riser ($300-400), task lighting ($50-100), USB mic if needed ($80-150). Total: $600-850 for functional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       <section className="newsletter">
         <div className="container">
           <div className="newsletter-inner">
