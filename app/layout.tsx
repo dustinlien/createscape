@@ -57,6 +57,15 @@ export default function RootLayout({
         
         {/* Twitter Card */}
         <meta name="twitter:creator" content="@createscape" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHGHG9SJZ9"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VHGHG9SJZ9');`}
+        </script>
       </head>
       <body>{children}</body>
     </html>
