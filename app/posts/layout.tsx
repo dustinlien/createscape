@@ -1,4 +1,5 @@
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 export default function PostsLayout({
   children,
@@ -165,6 +166,7 @@ export default function PostsLayout({
 
       <Navigation />
       {children}
+      <Footer />
     </>
   )
 }
