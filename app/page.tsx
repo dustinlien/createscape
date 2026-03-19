@@ -85,13 +85,13 @@ export default function Home() {
 
         .nav-links a {
           font-size: 13px;
-          font-weight: 400;
-          color: var(--n-400);
+          font-weight: 500;
+          color: var(--ember);
           text-decoration: none;
-          transition: color 0.2s;
+          transition: opacity 0.2s;
         }
 
-        .nav-links a:hover { color: var(--canvas); }
+        .nav-links a:hover { opacity: 0.88; }
 
         .nav-cta {
           background: var(--ember);
@@ -733,12 +733,13 @@ export default function Home() {
 
         .footer-links a {
           font-size: 13px;
-          color: var(--n-400);
+          color: var(--ember);
           text-decoration: none;
           transition: color 0.2s;
+          font-weight: 500;
         }
 
-        .footer-links a:hover { color: var(--canvas); }
+        .footer-links a:hover { opacity: 0.88; }
 
         .footer-bottom {
           display: flex;
