@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Best Ergonomic Chairs for Long Work Sessions 2026 | Createscape",
-  description: "Ergonomic chair buying guide for creators. Herman Miller, Steelcase, budget options for 8+ hour comfort.",
-  keywords: ["ergonomic chair","office chair","desk chair","workspace setup"],
+  title: "Best Ergonomic Chairs for Long Work Sessions 2026: Herman Miller vs Steelcase vs Secretlab | Createscape",
+  description: "Ergonomic chair buying guide. Herman Miller Aeron vs Steelcase Leap vs Secretlab Titan. Real comparisons, warranties, and which is worth the money.",
+  keywords: ["ergonomic chair","best office chair","Herman Miller Aeron","Steelcase Leap","desk chair"],
   openGraph: {
-    title: "Best Ergonomic Chairs for Long Work Sessions 2026",
-    description: "Ergonomic chair buying guide for creators. Herman Miller, Steelcase, budget options for 8+ hour comfort.",
+    title: "Best Ergonomic Chairs for Long Work Sessions 2026: Herman Miller vs Steelcase vs Secretlab",
+    description: "Ergonomic chair buying guide. Herman Miller Aeron vs Steelcase Leap vs Secretlab Titan. Real comparisons, warranties, and which is worth the money.",
     url: "https://www.createscape.co/posts/ergonomic-chairs",
     type: "article",
     images: []
@@ -70,11 +70,11 @@ export default function Post() {
       }}>
         <header style={{ marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--n-100)' }}>
           <h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '42px', fontWeight: '700', marginBottom: '16px' }}>
-            Best Ergonomic Chairs for Long Work Sessions 2026
+            Best Ergonomic Chairs for Long Work Sessions 2026: Herman Miller vs Steelcase vs Secretlab
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
             <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
-            7 min read · 
+            9 min read · 
             Updated: 2026-03-19
           </div>
         </header>

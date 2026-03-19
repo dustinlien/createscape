@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Backup Power Solutions for Your Setup | Createscape",
-  description: "UPS and battery backup solutions for creators. Never lose work to power outages.",
-  keywords: ["battery backup","UPS","power supply"],
+  title: "Backup Power for Creators 2026: UPS & Battery Backup Solutions That Actually Work | Createscape",
+  description: "UPS and battery backup buying guide for creators. Protect your work from power outages. APC vs CyberPower comparisons and real runtime testing.",
+  keywords: ["UPS","battery backup","power backup","uninterruptible power supply","surge protection"],
   openGraph: {
-    title: "Backup Power Solutions for Your Setup",
-    description: "UPS and battery backup solutions for creators. Never lose work to power outages.",
+    title: "Backup Power for Creators 2026: UPS & Battery Backup Solutions That Actually Work",
+    description: "UPS and battery backup buying guide for creators. Protect your work from power outages. APC vs CyberPower comparisons and real runtime testing.",
     url: "https://www.createscape.co/posts/backup-power",
     type: "article",
     images: []
@@ -57,11 +57,11 @@ export default function Post() {
       }}>
         <header style={{ marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--n-100)' }}>
           <h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '42px', fontWeight: '700', marginBottom: '16px' }}>
-            Backup Power Solutions for Your Setup
+            Backup Power for Creators 2026: UPS & Battery Backup Solutions That Actually Work
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
             <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
-            5 min read · 
+            7 min read · 
             Updated: 2026-03-19
           </div>
         </header>

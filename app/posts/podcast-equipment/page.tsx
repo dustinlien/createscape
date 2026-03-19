@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Podcast Equipment Guide 2026 | Createscape",
-  description: "Complete podcast setup guide. Microphones, audio interfaces, XLR cables for creators.",
-  keywords: ["podcast equipment","podcast microphone","podcast setup","audio recording"],
+  title: "Podcast Equipment Guide 2026: Microphones, Interfaces & Complete Setups | Createscape",
+  description: "Complete podcast equipment guide comparing USB vs XLR setups. Shure SM7B, Rode Procaster, budget options. All budgets covered with real tradeoffs.",
+  keywords: ["podcast equipment","podcast microphone","USB vs XLR","audio interface","podcast setup"],
   openGraph: {
-    title: "Podcast Equipment Guide 2026",
-    description: "Complete podcast setup guide. Microphones, audio interfaces, XLR cables for creators.",
+    title: "Podcast Equipment Guide 2026: Microphones, Interfaces & Complete Setups",
+    description: "Complete podcast equipment guide comparing USB vs XLR setups. Shure SM7B, Rode Procaster, budget options. All budgets covered with real tradeoffs.",
     url: "https://www.createscape.co/posts/podcast-equipment",
     type: "article",
     images: []
@@ -70,11 +70,11 @@ export default function Post() {
       }}>
         <header style={{ marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--n-100)' }}>
           <h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '42px', fontWeight: '700', marginBottom: '16px' }}>
-            Podcast Equipment Guide 2026
+            Podcast Equipment Guide 2026: Microphones, Interfaces & Complete Setups
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
             <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
-            10 min read · 
+            12 min read · 
             Updated: 2026-03-19
           </div>
         </header>

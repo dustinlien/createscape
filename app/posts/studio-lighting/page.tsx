@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Studio Lighting for Content Creators 2026 | Createscape",
-  description: "Professional lighting setup for video creation. Ring lights, key lights, 3-point setup.",
-  keywords: ["studio lighting","content creator lighting","video lighting","key light"],
+  title: "Studio Lighting for Content Creators 2026: Ring Lights, Key Lights & Setup Guides | Createscape",
+  description: "Complete studio lighting guide for video creators. Neewer vs Elgato. 3-point lighting setup, color temperature, and DIY options.",
+  keywords: ["studio lighting","ring light","key light","video lighting","content creator lighting"],
   openGraph: {
-    title: "Studio Lighting for Content Creators 2026",
-    description: "Professional lighting setup for video creation. Ring lights, key lights, 3-point setup.",
+    title: "Studio Lighting for Content Creators 2026: Ring Lights, Key Lights & Setup Guides",
+    description: "Complete studio lighting guide for video creators. Neewer vs Elgato. 3-point lighting setup, color temperature, and DIY options.",
     url: "https://www.createscape.co/posts/studio-lighting",
     type: "article",
     images: []
@@ -57,11 +57,11 @@ export default function Post() {
       }}>
         <header style={{ marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--n-100)' }}>
           <h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '42px', fontWeight: '700', marginBottom: '16px' }}>
-            Studio Lighting for Content Creators 2026
+            Studio Lighting for Content Creators 2026: Ring Lights, Key Lights & Setup Guides
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
             <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
-            7 min read · 
+            8 min read · 
             Updated: 2026-03-19
           </div>
         </header>

@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Best Cameras for Content Creators 2026 | Createscape",
-  description: "Camera buying guide for YouTube creators. Sony, Canon, DJI comparison for all budgets.",
-  keywords: ["best cameras","youtube camera","mirrorless camera","content creator camera"],
+  title: "Best Cameras for Content Creators 2026: Sony, Canon, DJI Compared | Createscape",
+  description: "Camera buying guide for YouTube creators. Sony A6400 vs Canon R50 vs DJI Osmo. Autofocus, 4K, stabilization, and real tradeoffs for creators.",
+  keywords: ["best camera for YouTube","mirrorless camera","Sony A6400","Canon R50","camera for content creators"],
   openGraph: {
-    title: "Best Cameras for Content Creators 2026",
-    description: "Camera buying guide for YouTube creators. Sony, Canon, DJI comparison for all budgets.",
+    title: "Best Cameras for Content Creators 2026: Sony, Canon, DJI Compared",
+    description: "Camera buying guide for YouTube creators. Sony A6400 vs Canon R50 vs DJI Osmo. Autofocus, 4K, stabilization, and real tradeoffs for creators.",
     url: "https://www.createscape.co/posts/best-cameras",
     type: "article",
     images: []
@@ -70,11 +70,11 @@ export default function Post() {
       }}>
         <header style={{ marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--n-100)' }}>
           <h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '42px', fontWeight: '700', marginBottom: '16px' }}>
-            Best Cameras for Content Creators 2026
+            Best Cameras for Content Creators 2026: Sony, Canon, DJI Compared
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
             <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
-            8 min read · 
+            11 min read · 
             Updated: 2026-03-19
           </div>
         </header>

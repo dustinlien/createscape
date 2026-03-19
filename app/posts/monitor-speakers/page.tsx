@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Monitor Speakers for Creators | Createscape",
-  description: "Best studio monitor speakers for music production and video editing. Budget to premium options.",
-  keywords: ["studio monitors","speakers","audio setup","music production"],
+  title: "Best Studio Monitor Speakers for Music & Video 2026: Adam Audio vs JBL vs Yamaha | Createscape",
+  description: "Studio monitor buying guide for music production and video editing. Active speakers comparison. Budget to professional options.",
+  keywords: ["studio monitors","monitor speakers","music production speakers","audio monitoring"],
   openGraph: {
-    title: "Monitor Speakers for Creators",
-    description: "Best studio monitor speakers for music production and video editing. Budget to premium options.",
+    title: "Best Studio Monitor Speakers for Music & Video 2026: Adam Audio vs JBL vs Yamaha",
+    description: "Studio monitor buying guide for music production and video editing. Active speakers comparison. Budget to professional options.",
     url: "https://www.createscape.co/posts/monitor-speakers",
     type: "article",
     images: []
@@ -70,11 +70,11 @@ export default function Post() {
       }}>
         <header style={{ marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--n-100)' }}>
           <h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '42px', fontWeight: '700', marginBottom: '16px' }}>
-            Monitor Speakers for Creators
+            Best Studio Monitor Speakers for Music & Video 2026: Adam Audio vs JBL vs Yamaha
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
             <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
-            6 min read · 
+            8 min read · 
             Updated: 2026-03-19
           </div>
         </header>

@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Microphone Placement and Setup | Createscape",
-  description: "Microphone placement and setup guide. Get better vocal recordings with proper positioning.",
-  keywords: ["microphone setup","mic placement","vocal recording"],
+  title: "Microphone Placement & Setup Guide 2026: Boom Arms, Stands, and Positioning for Pro Audio | Createscape",
+  description: "Mic setup guide for creators. Boom arm placement, mic stands, shock mounts. Get professional audio through proper positioning and mounting.",
+  keywords: ["microphone placement","mic stand","boom arm","mic positioning","audio setup"],
   openGraph: {
-    title: "Microphone Placement and Setup",
-    description: "Microphone placement and setup guide. Get better vocal recordings with proper positioning.",
+    title: "Microphone Placement & Setup Guide 2026: Boom Arms, Stands, and Positioning for Pro Audio",
+    description: "Mic setup guide for creators. Boom arm placement, mic stands, shock mounts. Get professional audio through proper positioning and mounting.",
     url: "https://www.createscape.co/posts/microphone-placement",
     type: "article",
     images: []
@@ -70,11 +70,11 @@ export default function Post() {
       }}>
         <header style={{ marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--n-100)' }}>
           <h1 style={{ fontFamily: "'Syne', sans-serif", fontSize: '42px', fontWeight: '700', marginBottom: '16px' }}>
-            Microphone Placement and Setup
+            Microphone Placement & Setup Guide 2026: Boom Arms, Stands, and Positioning for Pro Audio
           </h1>
           <div style={{ fontSize: '14px', color: 'var(--n-500)' }}>
             <strong style={{ color: 'var(--void)' }}>By Eli Black</strong> · 
-            6 min read · 
+            7 min read · 
             Updated: 2026-03-19
           </div>
         </header>
