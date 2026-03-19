@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Video Editing Workstation Setup | Createscape",
-  description: "Computer specs, monitors, and peripherals for fast video editing.",
+  description: "Video editing workstation setup. Computer specs, monitors, and peripherals for fast editing.",
   keywords: ["video editing","workstation","editing setup"],
   openGraph: {
     title: "Video Editing Workstation Setup",
-    description: "Computer specs, monitors, and peripherals for fast video editing.",
+    description: "Video editing workstation setup. Computer specs, monitors, and peripherals for fast editing.",
     url: "https://www.createscape.co/posts/video-editing",
     type: "article",
     images: []
@@ -14,7 +14,47 @@ export const metadata: Metadata = {
 }
 
 export default function Post() {
-  const relatedProducts = [] as any;
+  const relatedProducts = [
+  {
+    "id": "secretlab-titan",
+    "name": "Secretlab Titan",
+    "category": "Chair",
+    "asin": "B08DTY63N1",
+    "image": "https://m.media-amazon.com/images/I/81xBBTH3aaL._AC_SY300_.jpg",
+    "price": "$379-449",
+    "features": [
+      "Gaming comfort",
+      "Premium materials",
+      "Great value"
+    ]
+  },
+  {
+    "id": "dell-s2720dgf",
+    "name": "Dell S2720DGF",
+    "category": "Monitor",
+    "asin": "B007PTYE2E",
+    "image": "https://m.media-amazon.com/images/I/71P1uR-kOhL._AC_SY300_.jpg",
+    "price": "$199-299",
+    "features": [
+      "165Hz refresh rate",
+      "1440p resolution",
+      "IPS panel"
+    ]
+  },
+  {
+    "id": "sony-a6400",
+    "name": "Sony A6400",
+    "category": "Camera",
+    "asin": "B0842JSGTS",
+    "image": "https://m.media-amazon.com/images/I/71Wj1s8e7-L._AC_SY300_.jpg",
+    "price": "$748",
+    "features": [
+      "4K video",
+      "Fast autofocus",
+      "Compact mirrorless"
+    ]
+  }
+] as any;
 
   return (
     <main style={{
@@ -60,6 +100,72 @@ export default function Post() {
         </section>
 
         {/* Related Products */}
+        
+        <section style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid var(--n-100)' }}>
+          <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: '600', marginBottom: '24px' }}>
+            Shop the gear mentioned
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+            
+            <a 
+              href="https://amazon.com/dp/B08DTY63N1?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=secretlab-titan"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/81xBBTH3aaL._AC_SY300_.jpg" alt="Secretlab Titan" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Secretlab Titan</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$379-449</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B007PTYE2E?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=dell-s2720dgf"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71P1uR-kOhL._AC_SY300_.jpg" alt="Dell S2720DGF" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Dell S2720DGF</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$199-299</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B0842JSGTS?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=sony-a6400"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71Wj1s8e7-L._AC_SY300_.jpg" alt="Sony A6400" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Sony A6400</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$748</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+          </div>
+        </section>
         
 
         {/* Affiliate Disclosure */}

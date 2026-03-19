@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Best Monitors for Streamers | Createscape",
-  description: "Multi-monitor setup for streaming. High refresh rate, color accuracy options.",
+  description: "Best monitors for streamers and creators. High refresh rate, color accuracy, multi-monitor setups.",
   keywords: ["gaming monitor","streamer monitor","high refresh rate"],
   openGraph: {
     title: "Best Monitors for Streamers",
-    description: "Multi-monitor setup for streaming. High refresh rate, color accuracy options.",
+    description: "Best monitors for streamers and creators. High refresh rate, color accuracy, multi-monitor setups.",
     url: "https://www.createscape.co/posts/monitors-streamers",
     type: "article",
     images: []
@@ -14,7 +14,47 @@ export const metadata: Metadata = {
 }
 
 export default function Post() {
-  const relatedProducts = [] as any;
+  const relatedProducts = [
+  {
+    "id": "dell-s2720dgf",
+    "name": "Dell S2720DGF",
+    "category": "Monitor",
+    "asin": "B007PTYE2E",
+    "image": "https://m.media-amazon.com/images/I/71P1uR-kOhL._AC_SY300_.jpg",
+    "price": "$199-299",
+    "features": [
+      "165Hz refresh rate",
+      "1440p resolution",
+      "IPS panel"
+    ]
+  },
+  {
+    "id": "lg-ultrawide",
+    "name": "LG UltraWide",
+    "category": "Monitor",
+    "asin": "B08H1WLBZH",
+    "image": "https://m.media-amazon.com/images/I/81vDHPLnl2L._AC_SY300_.jpg",
+    "price": "$299-499",
+    "features": [
+      "Ultrawide format",
+      "Productivity boost",
+      "Professional"
+    ]
+  },
+  {
+    "id": "elgato-key-light",
+    "name": "Elgato Key Light",
+    "category": "Lighting",
+    "asin": "B07L755X39",
+    "image": "https://m.media-amazon.com/images/I/81e3VBi7ivL._AC_SY300_.jpg",
+    "price": "$200",
+    "features": [
+      "Smart light",
+      "App control",
+      "Professional quality"
+    ]
+  }
+] as any;
 
   return (
     <main style={{
@@ -60,6 +100,72 @@ export default function Post() {
         </section>
 
         {/* Related Products */}
+        
+        <section style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid var(--n-100)' }}>
+          <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: '600', marginBottom: '24px' }}>
+            Shop the gear mentioned
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+            
+            <a 
+              href="https://amazon.com/dp/B007PTYE2E?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=dell-s2720dgf"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71P1uR-kOhL._AC_SY300_.jpg" alt="Dell S2720DGF" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Dell S2720DGF</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$199-299</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B08H1WLBZH?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=lg-ultrawide"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/81vDHPLnl2L._AC_SY300_.jpg" alt="LG UltraWide" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>LG UltraWide</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$299-499</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B07L755X39?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=elgato-key-light"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/81e3VBi7ivL._AC_SY300_.jpg" alt="Elgato Key Light" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Elgato Key Light</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$200</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+          </div>
+        </section>
         
 
         {/* Affiliate Disclosure */}

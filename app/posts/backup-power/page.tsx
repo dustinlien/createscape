@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Backup Power Solutions for Your Setup | Createscape",
-  description: "UPS and battery backup for creative workflows. Never lose work to power outages.",
+  description: "UPS and battery backup solutions for creators. Never lose work to power outages.",
   keywords: ["battery backup","UPS","power supply"],
   openGraph: {
     title: "Backup Power Solutions for Your Setup",
-    description: "UPS and battery backup for creative workflows. Never lose work to power outages.",
+    description: "UPS and battery backup solutions for creators. Never lose work to power outages.",
     url: "https://www.createscape.co/posts/backup-power",
     type: "article",
     images: []
@@ -14,7 +14,34 @@ export const metadata: Metadata = {
 }
 
 export default function Post() {
-  const relatedProducts = [] as any;
+  const relatedProducts = [
+  {
+    "id": "apc-battery",
+    "name": "APC Battery",
+    "category": "Power",
+    "asin": "B07YR1KYF1",
+    "image": "https://m.media-amazon.com/images/I/71PBnr2vCsL._AC_SY300_.jpg",
+    "price": "$99-149",
+    "features": [
+      "Battery backup",
+      "UPS system",
+      "Surge protection"
+    ]
+  },
+  {
+    "id": "cyberpower-ups",
+    "name": "CyberPower UPS",
+    "category": "Power",
+    "asin": "B0BFLYY8GT",
+    "image": "https://m.media-amazon.com/images/I/71N1o1kKx1L._AC_SY300_.jpg",
+    "price": "$79-129",
+    "features": [
+      "Affordable UPS",
+      "Battery backup",
+      "Reliable"
+    ]
+  }
+] as any;
 
   return (
     <main style={{
@@ -60,6 +87,53 @@ export default function Post() {
         </section>
 
         {/* Related Products */}
+        
+        <section style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid var(--n-100)' }}>
+          <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: '600', marginBottom: '24px' }}>
+            Shop the gear mentioned
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+            
+            <a 
+              href="https://amazon.com/dp/B07YR1KYF1?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=apc-battery"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71PBnr2vCsL._AC_SY300_.jpg" alt="APC Battery" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>APC Battery</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$99-149</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B0BFLYY8GT?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=cyberpower-ups"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71N1o1kKx1L._AC_SY300_.jpg" alt="CyberPower UPS" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>CyberPower UPS</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$79-129</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+          </div>
+        </section>
         
 
         {/* Affiliate Disclosure */}

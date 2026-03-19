@@ -1,8 +1,8 @@
 ---
 title: "Biophilic Lighting for Creator Workspaces"
-description: "Natural light and circadian rhythm lighting for better creativity and health."
+description: "Natural and circadian rhythm lighting for creator workspaces. Better for health and creativity."
 keywords: ["lighting","circadian rhythm","workspace design"]
-products: []
+products: ["nanoleaf","neewer-ring-light","elgato-key-light"]
 author: "Eli Black"
 updatedDate: "2026-03-19"
 readTime: 7

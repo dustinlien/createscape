@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Microphone Placement and Setup | Createscape",
-  description: "Getting the best vocal recordings. Mic stands, boom arms, positioning guide.",
+  description: "Microphone placement and setup guide. Get better vocal recordings with proper positioning.",
   keywords: ["microphone setup","mic placement","vocal recording"],
   openGraph: {
     title: "Microphone Placement and Setup",
-    description: "Getting the best vocal recordings. Mic stands, boom arms, positioning guide.",
+    description: "Microphone placement and setup guide. Get better vocal recordings with proper positioning.",
     url: "https://www.createscape.co/posts/microphone-placement",
     type: "article",
     images: []
@@ -14,7 +14,47 @@ export const metadata: Metadata = {
 }
 
 export default function Post() {
-  const relatedProducts = [] as any;
+  const relatedProducts = [
+  {
+    "id": "rode-mic-arm",
+    "name": "Rode Mic Arm",
+    "category": "Mic Accessory",
+    "asin": "B00WNZX5YS",
+    "image": "https://m.media-amazon.com/images/I/81MjN0nKj3L._AC_SY300_.jpg",
+    "price": "$29",
+    "features": [
+      "Boom arm",
+      "Stable mount",
+      "Professional"
+    ]
+  },
+  {
+    "id": "shure-sm7b",
+    "name": "Shure SM7B",
+    "category": "Microphone",
+    "asin": "B0002GRBO0",
+    "image": "https://m.media-amazon.com/images/I/71TvCXqnhYL._AC_SY300_.jpg",
+    "price": "$399",
+    "features": [
+      "Broadcast quality",
+      "Industry standard",
+      "Cardioid pattern"
+    ]
+  },
+  {
+    "id": "rode-procaster",
+    "name": "Rode Procaster",
+    "category": "Microphone",
+    "asin": "B008G0NK7M",
+    "image": "https://m.media-amazon.com/images/I/81PvvwFRr2L._AC_SY300_.jpg",
+    "price": "$199",
+    "features": [
+      "Podcast-ready",
+      "XLR output",
+      "Rugged build"
+    ]
+  }
+] as any;
 
   return (
     <main style={{
@@ -60,6 +100,72 @@ export default function Post() {
         </section>
 
         {/* Related Products */}
+        
+        <section style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid var(--n-100)' }}>
+          <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: '600', marginBottom: '24px' }}>
+            Shop the gear mentioned
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+            
+            <a 
+              href="https://amazon.com/dp/B00WNZX5YS?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=rode-mic-arm"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/81MjN0nKj3L._AC_SY300_.jpg" alt="Rode Mic Arm" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Rode Mic Arm</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$29</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B0002GRBO0?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=shure-sm7b"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71TvCXqnhYL._AC_SY300_.jpg" alt="Shure SM7B" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Shure SM7B</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$399</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B008G0NK7M?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=rode-procaster"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/81PvvwFRr2L._AC_SY300_.jpg" alt="Rode Procaster" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Rode Procaster</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$199</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+          </div>
+        </section>
         
 
         {/* Affiliate Disclosure */}

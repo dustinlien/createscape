@@ -1,8 +1,8 @@
 ---
 title: "Video Editing Workstation Setup"
-description: "Computer specs, monitors, and peripherals for fast video editing."
+description: "Video editing workstation setup. Computer specs, monitors, and peripherals for fast editing."
 keywords: ["video editing","workstation","editing setup"]
-products: []
+products: ["secretlab-titan","dell-s2720dgf","sony-a6400"]
 author: "Eli Black"
 updatedDate: "2026-03-19"
 readTime: 9

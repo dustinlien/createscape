@@ -1,8 +1,8 @@
 ---
 title: "Lapel Microphones for Video Creation"
-description: "Wireless lavalier mics for video and podcasting. Hands-free audio recording."
+description: "Wireless lavalier microphones for video and podcasting. Hands-free audio recording."
 keywords: ["lapel mic","lavalier microphone","wireless mic"]
-products: []
+products: ["rode-lav","rode-wireless-go"]
 author: "Eli Black"
 updatedDate: "2026-03-19"
 readTime: 6

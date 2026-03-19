@@ -1,8 +1,8 @@
 ---
 title: "Backup Power Solutions for Your Setup"
-description: "UPS and battery backup for creative workflows. Never lose work to power outages."
+description: "UPS and battery backup solutions for creators. Never lose work to power outages."
 keywords: ["battery backup","UPS","power supply"]
-products: []
+products: ["apc-battery","cyberpower-ups"]
 author: "Eli Black"
 updatedDate: "2026-03-19"
 readTime: 5

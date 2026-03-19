@@ -161,6 +161,105 @@
       "image": "https://m.media-amazon.com/images/I/61h3bV-XQ2L._AC_SY300_.jpg",
       "price": "$199",
       "features": ["4K capture", "Zero lag", "Pro streaming"]
+    },
+    {
+      "id": "apc-battery",
+      "name": "APC Battery",
+      "category": "Power",
+      "asin": "B07YR1KYF1",
+      "image": "https://m.media-amazon.com/images/I/71PBnr2vCsL._AC_SY300_.jpg",
+      "price": "$99-149",
+      "features": ["Battery backup", "UPS system", "Surge protection"]
+    },
+    {
+      "id": "cyberpower-ups",
+      "name": "CyberPower UPS",
+      "category": "Power",
+      "asin": "B0BFLYY8GT",
+      "image": "https://m.media-amazon.com/images/I/71N1o1kKx1L._AC_SY300_.jpg",
+      "price": "$79-129",
+      "features": ["Affordable UPS", "Battery backup", "Reliable"]
+    },
+    {
+      "id": "cable-clips",
+      "name": "Cable Clips",
+      "category": "Cable",
+      "asin": "B07KZB1F7K",
+      "image": "https://m.media-amazon.com/images/I/61oX-B6+7iL._AC_SY300_.jpg",
+      "price": "$12-18",
+      "features": ["Organize cables", "Adhesive clips", "Reusable"]
+    },
+    {
+      "id": "cable-sleeve",
+      "name": "Cable Sleeve",
+      "category": "Cable",
+      "asin": "B09GR5S61V",
+      "image": "https://m.media-amazon.com/images/I/61f0+Ym3kaL._AC_SY300_.jpg",
+      "price": "$15-25",
+      "features": ["Hide cables", "Protective sleeve", "Various sizes"]
+    },
+    {
+      "id": "desktop-organizer",
+      "name": "Desktop Organizer",
+      "category": "Desk",
+      "asin": "B08BJPT44K",
+      "image": "https://m.media-amazon.com/images/I/71CKYMhLZOL._AC_SY300_.jpg",
+      "price": "$25-40",
+      "features": ["Desk storage", "Cable management", "Organization"]
+    },
+    {
+      "id": "rode-lav",
+      "name": "Rode Lav",
+      "category": "Microphone",
+      "asin": "B00AQBEFTA",
+      "image": "https://m.media-amazon.com/images/I/61hm1qWPYrL._AC_SY300_.jpg",
+      "price": "$59",
+      "features": ["Lavalier mic", "Omnidirectional", "Budget-friendly"]
+    },
+    {
+      "id": "rode-wireless-go",
+      "name": "Rode Wireless GO",
+      "category": "Microphone",
+      "asin": "B08ZCMVN9Z",
+      "image": "https://m.media-amazon.com/images/I/61OJhFY8rXL._AC_SY300_.jpg",
+      "price": "$199-299",
+      "features": ["Wireless mic", "Tiny transmitter", "Great audio"]
+    },
+    {
+      "id": "nanoleaf",
+      "name": "Nanoleaf",
+      "category": "Lighting",
+      "asin": "B07PMLBPM6",
+      "image": "https://m.media-amazon.com/images/I/71nj4A3R3ZL._AC_SY300_.jpg",
+      "price": "$59-199",
+      "features": ["Smart lighting", "RGB colors", "Modular panels"]
+    },
+    {
+      "id": "rode-mic-arm",
+      "name": "Rode Mic Arm",
+      "category": "Mic Accessory",
+      "asin": "B00WNZX5YS",
+      "image": "https://m.media-amazon.com/images/I/81MjN0nKj3L._AC_SY300_.jpg",
+      "price": "$29",
+      "features": ["Boom arm", "Stable mount", "Professional"]
+    },
+    {
+      "id": "dell-s2720dgf",
+      "name": "Dell S2720DGF",
+      "category": "Monitor",
+      "asin": "B007PTYE2E",
+      "image": "https://m.media-amazon.com/images/I/71P1uR-kOhL._AC_SY300_.jpg",
+      "price": "$199-299",
+      "features": ["165Hz refresh rate", "1440p resolution", "IPS panel"]
+    },
+    {
+      "id": "lg-ultrawide",
+      "name": "LG UltraWide",
+      "category": "Monitor",
+      "asin": "B08H1WLBZH",
+      "image": "https://m.media-amazon.com/images/I/81vDHPLnl2L._AC_SY300_.jpg",
+      "price": "$299-499",
+      "features": ["Ultrawide format", "Productivity boost", "Professional"]
     }
   ]
 }

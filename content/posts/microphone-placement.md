@@ -1,8 +1,8 @@
 ---
 title: "Microphone Placement and Setup"
-description: "Getting the best vocal recordings. Mic stands, boom arms, positioning guide."
+description: "Microphone placement and setup guide. Get better vocal recordings with proper positioning."
 keywords: ["microphone setup","mic placement","vocal recording"]
-products: []
+products: ["rode-mic-arm","shure-sm7b","rode-procaster"]
 author: "Eli Black"
 updatedDate: "2026-03-19"
 readTime: 6

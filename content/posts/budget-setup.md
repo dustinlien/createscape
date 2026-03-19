@@ -1,8 +1,8 @@
 ---
 title: "Budget Creator Workspace Setup"
-description: "Start creating with minimal investment. Budget-friendly gear that works."
+description: "Build a professional creator workspace on a budget. Gear that actually delivers."
 keywords: ["budget workspace","affordable setup","creator on a budget"]
-products: []
+products: ["uplift-v3","herman-miller-aeron","neewer-ring-light","sony-a6400"]
 author: "Eli Black"
 updatedDate: "2026-03-19"
 readTime: 8

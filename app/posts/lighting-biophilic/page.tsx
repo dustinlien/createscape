@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Biophilic Lighting for Creator Workspaces | Createscape",
-  description: "Natural light and circadian rhythm lighting for better creativity and health.",
+  description: "Natural and circadian rhythm lighting for creator workspaces. Better for health and creativity.",
   keywords: ["lighting","circadian rhythm","workspace design"],
   openGraph: {
     title: "Biophilic Lighting for Creator Workspaces",
-    description: "Natural light and circadian rhythm lighting for better creativity and health.",
+    description: "Natural and circadian rhythm lighting for creator workspaces. Better for health and creativity.",
     url: "https://www.createscape.co/posts/lighting-biophilic",
     type: "article",
     images: []
@@ -14,7 +14,47 @@ export const metadata: Metadata = {
 }
 
 export default function Post() {
-  const relatedProducts = [] as any;
+  const relatedProducts = [
+  {
+    "id": "nanoleaf",
+    "name": "Nanoleaf",
+    "category": "Lighting",
+    "asin": "B07PMLBPM6",
+    "image": "https://m.media-amazon.com/images/I/71nj4A3R3ZL._AC_SY300_.jpg",
+    "price": "$59-199",
+    "features": [
+      "Smart lighting",
+      "RGB colors",
+      "Modular panels"
+    ]
+  },
+  {
+    "id": "neewer-ring-light",
+    "name": "Neewer Ring Light",
+    "category": "Lighting",
+    "asin": "B07ZRB1X5Q",
+    "image": "https://m.media-amazon.com/images/I/71xrMr1fT4L._AC_SY300_.jpg",
+    "price": "$45-65",
+    "features": [
+      "Budget-friendly",
+      "RGB color",
+      "Phone mount"
+    ]
+  },
+  {
+    "id": "elgato-key-light",
+    "name": "Elgato Key Light",
+    "category": "Lighting",
+    "asin": "B07L755X39",
+    "image": "https://m.media-amazon.com/images/I/81e3VBi7ivL._AC_SY300_.jpg",
+    "price": "$200",
+    "features": [
+      "Smart light",
+      "App control",
+      "Professional quality"
+    ]
+  }
+] as any;
 
   return (
     <main style={{
@@ -60,6 +100,72 @@ export default function Post() {
         </section>
 
         {/* Related Products */}
+        
+        <section style={{ marginTop: '60px', paddingTop: '40px', borderTop: '1px solid var(--n-100)' }}>
+          <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: '600', marginBottom: '24px' }}>
+            Shop the gear mentioned
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
+            
+            <a 
+              href="https://amazon.com/dp/B07PMLBPM6?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=nanoleaf"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71nj4A3R3ZL._AC_SY300_.jpg" alt="Nanoleaf" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Nanoleaf</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$59-199</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B07ZRB1X5Q?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=neewer-ring-light"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/71xrMr1fT4L._AC_SY300_.jpg" alt="Neewer Ring Light" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Neewer Ring Light</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$45-65</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+            <a 
+              href="https://amazon.com/dp/B07L755X39?tag=createscape-20&utm_source=createscape&utm_medium=blog&utm_campaign=elgato-key-light"
+              style={{
+                padding: '16px',
+                background: 'var(--n-100)',
+                border: '1px solid var(--n-200)',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: 'var(--void)',
+                transition: 'all 0.2s',
+                display: 'block'
+              }}
+            >
+              <img src="https://m.media-amazon.com/images/I/81e3VBi7ivL._AC_SY300_.jpg" alt="Elgato Key Light" style={{ width: '100%', height: '100px', objectFit: 'cover', borderRadius: '4px', marginBottom: '12px' }} />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>Elgato Key Light</div>
+              <div style={{ fontSize: '12px', color: 'var(--n-500)' }}>$200</div>
+              <div style={{ fontSize: '11px', color: 'var(--signal)', marginTop: '8px' }}>View on Amazon →</div>
+            </a>
+            
+          </div>
+        </section>
         
 
         {/* Affiliate Disclosure */}
